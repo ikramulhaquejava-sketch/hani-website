@@ -1,0 +1,1656 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HANI Overseas | Premium Metal Handicrafts & Export</title>
+    
+    <!-- Premium Typography -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+    <style>
+        /* =========================================
+           CSS Reset & Variables
+           ========================================= */
+        :root {
+            --bg-pure: #FFFFFF;
+            --bg-alabaster: #FBFBFA;
+            --gold: #C5A880;
+            --gold-light: #E8DCCB;
+            --charcoal: #2A2A2A;
+            --black-matte: #111111;
+            --border-light: #EAEAEA;
+            --whatsapp-green: #25D366;
+            --font-serif: 'Cormorant Garamond', serif;
+            --font-sans: 'Inter', sans-serif;
+            --spacing-section: 8rem;
+            --transition-smooth: cubic-bezier(0.25, 1, 0.5, 1);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            font-size: 16px;
+            overflow-x: hidden;
+        }
+
+        body {
+            /* Animated Shimmering Gradient Background */
+            background: linear-gradient(135deg, #FFFFFF 0%, #FBFBFA 25%, #F5F4F2 50%, #FBFBFA 75%, #FFFFFF 100%);
+            background-size: 400% 400%;
+            animation: gradientShift 20s ease infinite;
+            color: var(--charcoal);
+            font-family: var(--font-sans);
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+            overflow-x: hidden;
+        }
+
+        @keyframes gradientShift {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        /* Custom Animated Cursor Glow */
+        .cursor-glow {
+            position: fixed;
+            width: 400px;
+            height: 400px;
+            border-radius: 50%;
+            background: radial-gradient(circle, rgba(197, 168, 128, 0.08) 0%, transparent 70%);
+            pointer-events: none;
+            z-index: 9999;
+            transform: translate(-50%, -50%);
+            transition: opacity 0.3s ease;
+            opacity: 0;
+        }
+
+        /* =========================================
+           Floating WhatsApp Button
+           ========================================= */
+        .whatsapp-toggle {
+            position: fixed;
+            bottom: 30px;
+            left: 30px;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            background: var(--whatsapp-green);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            z-index: 10000;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.15);
+            transition: all 0.3s var(--transition-smooth);
+            text-decoration: none;
+        }
+
+        .whatsapp-toggle:hover {
+            background: #128C7E;
+            transform: scale(1.1);
+            box-shadow: 0 8px 30px rgba(37, 211, 102, 0.5);
+        }
+
+        .whatsapp-toggle svg {
+            width: 30px;
+            height: 30px;
+            fill: white;
+        }
+
+        .whatsapp-toggle::before {
+            content: '';
+            position: absolute;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            background: var(--whatsapp-green);
+            animation: whatsappPulse 2s infinite;
+            z-index: -1;
+        }
+
+        @keyframes whatsappPulse {
+            0% { transform: scale(1); opacity: 0.7; }
+            100% { transform: scale(1.5); opacity: 0; }
+        }
+
+        /* =========================================
+           Typography & Global Elements
+           ========================================= */
+        h1, h2, h3, h4 {
+            font-family: var(--font-serif);
+            font-weight: 400;
+            color: var(--black-matte);
+            line-height: 1.1;
+        }
+
+        p {
+            font-size: 1rem;
+            font-weight: 300;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 5%;
+        }
+
+        .label {
+            font-family: var(--font-sans);
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 0.15em;
+            color: var(--gold);
+            font-weight: 500;
+            display: block;
+            margin-bottom: 1rem;
+        }
+
+        /* Scroll Reveal Animation Classes */
+        .reveal {
+            opacity: 0;
+            transform: translateY(40px);
+            transition: opacity 1s var(--transition-smooth), transform 1s var(--transition-smooth);
+        }
+
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* =========================================
+           Navigation & Mega Menu
+           ========================================= */
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(251, 251, 250, 0.85);
+            backdrop-filter: blur(15px);
+            -webkit-backdrop-filter: blur(15px);
+            border-bottom: 1px solid var(--border-light);
+            z-index: 1000;
+            padding: 1rem 0;
+            transition: all 0.3s ease;
+        }
+
+        .nav-inner {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .nav-logo img {
+            height: 70px;
+            width: auto;
+            display: block;
+            transition: height 0.3s ease, transform 0.3s ease;
+        }
+
+        .nav-logo img:hover {
+            transform: scale(1.05);
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 3rem;
+            align-items: center;
+        }
+
+        .nav-links > a, .dropdown-trigger {
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            font-weight: 400;
+            color: var(--charcoal);
+            transition: color 0.3s ease;
+            cursor: pointer;
+            padding: 0.5rem 0;
+        }
+
+        .nav-links > a:hover, .dropdown-trigger:hover {
+            color: var(--gold);
+        }
+
+        /* Mega Menu Dropdown */
+        .dropdown {
+            position: relative;
+        }
+
+        .dropdown-trigger {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .dropdown-trigger::after {
+            content: '';
+            display: inline-block;
+            width: 6px;
+            height: 6px;
+            border-right: 1.5px solid var(--charcoal);
+            border-bottom: 1.5px solid var(--charcoal);
+            transform: rotate(45deg) translateY(-2px);
+            transition: transform 0.3s ease;
+        }
+
+        .dropdown:hover .dropdown-trigger::after {
+            transform: rotate(225deg) translateY(-2px);
+        }
+
+        .mega-menu {
+            position: absolute;
+            top: 100%;
+            left: 50%;
+            transform: translateX(-50%) translateY(10px);
+            width: 600px;
+            background: var(--bg-pure);
+            border: 1px solid var(--border-light);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.08);
+            padding: 2.5rem;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s var(--transition-smooth);
+            margin-top: 1rem;
+        }
+
+        .mega-menu::before {
+            content: '';
+            position: absolute;
+            top: -1.5rem;
+            left: 0;
+            width: 100%;
+            height: 1.5rem;
+        }
+
+        .dropdown:hover .mega-menu {
+            opacity: 1;
+            visibility: visible;
+            transform: translateX(-50%) translateY(0);
+        }
+
+        .mega-menu-item {
+            display: flex;
+            flex-direction: column;
+            gap: 0.25rem;
+            padding: 0.75rem 1rem;
+            cursor: pointer;
+            transition: background-color 0.2s ease, transform 0.2s ease;
+            border-left: 2px solid transparent;
+        }
+
+        .mega-menu-item:hover {
+            background-color: var(--bg-alabaster);
+            border-left-color: var(--gold);
+            transform: translateX(5px);
+        }
+
+        .mega-menu-item h4 {
+            font-family: var(--font-serif);
+            font-size: 1.25rem;
+            margin: 0;
+        }
+
+        .mega-menu-item p {
+            font-size: 0.75rem;
+            color: #888;
+            margin: 0;
+        }
+
+        /* Mobile Menu Toggle */
+        .menu-toggle {
+            display: none;
+            flex-direction: column;
+            gap: 6px;
+            cursor: pointer;
+            padding: 10px;
+            z-index: 1001;
+        }
+
+        .menu-toggle span {
+            display: block;
+            width: 25px;
+            height: 2px;
+            background-color: var(--charcoal);
+            transition: all 0.3s ease;
+        }
+
+        /* Mobile Navigation Overlay */
+        .mobile-nav {
+            position: fixed;
+            top: 0;
+            right: -100%;
+            width: 100%;
+            height: 100vh;
+            background: rgba(251, 251, 250, 0.98);
+            backdrop-filter: blur(15px);
+            -webkit-backdrop-filter: blur(15px);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 2rem;
+            transition: right 0.4s var(--transition-smooth);
+            z-index: 999;
+        }
+
+        .mobile-nav.active {
+            right: 0;
+        }
+
+        .mobile-nav a, .mobile-nav .mobile-collection-title {
+            font-family: var(--font-serif);
+            font-size: 2rem;
+            color: var(--charcoal);
+            cursor: pointer;
+        }
+
+        .mobile-nav a:hover, .mobile-nav .mobile-collection-title:hover {
+            color: var(--gold);
+        }
+
+        .mobile-collections {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .mobile-collections .sub-link {
+            font-family: var(--font-sans);
+            font-size: 1rem;
+            color: #666;
+            cursor: pointer;
+        }
+
+        .mobile-collections .sub-link:hover {
+            color: var(--gold);
+        }
+
+        /* =========================================
+           Hero Header
+           ========================================= */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            position: relative;
+            background-color: transparent;
+            overflow: hidden;
+            padding-top: 120px;
+            padding-bottom: 4rem;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 3;
+            width: 50%;
+        }
+
+        .hero h1 {
+            font-size: 5rem;
+            margin-bottom: 2rem;
+            letter-spacing: -0.02em;
+        }
+
+        .hero p {
+            font-size: 1.125rem;
+            max-width: 450px;
+            margin-bottom: 3rem;
+            color: #555;
+        }
+
+        .hero-image {
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 55%;
+            height: 100%;
+            background-image: url('https://images.unsplash.com/photo-1616422285623-1384c0f79cba?q=80&w=2000&auto=format&fit=crop');
+            background-size: cover;
+            background-position: center;
+            mix-blend-mode: multiply;
+            opacity: 0.85;
+            z-index: 1;
+        }
+
+        .hero-image-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(to right, #FFFFFF 0%, transparent 100%);
+        }
+
+        /* Floating Particles & Words */
+        .particles-container {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 2;
+            overflow: hidden;
+        }
+
+        .particle {
+            position: absolute;
+            background: var(--gold);
+            border-radius: 50%;
+            opacity: 0.15;
+            animation: float 15s infinite linear;
+        }
+
+        .particle:nth-child(1) { width: 8px; height: 8px; left: 10%; animation-duration: 18s; animation-delay: 0s; }
+        .particle:nth-child(2) { width: 12px; height: 12px; left: 30%; animation-duration: 22s; animation-delay: 2s; }
+        .particle:nth-child(3) { width: 6px; height: 6px; left: 50%; animation-duration: 15s; animation-delay: 4s; }
+        .particle:nth-child(4) { width: 10px; height: 10px; left: 70%; animation-duration: 25s; animation-delay: 1s; }
+        .particle:nth-child(5) { width: 14px; height: 14px; left: 90%; animation-duration: 20s; animation-delay: 3s; }
+        .particle:nth-child(6) { width: 7px; height: 7px; left: 20%; animation-duration: 17s; animation-delay: 5s; }
+        .particle:nth-child(7) { width: 9px; height: 9px; left: 80%; animation-duration: 19s; animation-delay: 6s; }
+
+        @keyframes float {
+            0% { transform: translateY(100vh) scale(0); opacity: 0; }
+            10% { opacity: 0.2; }
+            90% { opacity: 0.2; }
+            100% { transform: translateY(-100px) scale(1); opacity: 0; }
+        }
+
+        .floating-word {
+            position: absolute;
+            font-family: var(--font-serif);
+            font-size: 1.5rem;
+            color: rgba(197, 168, 128, 0.15);
+            font-style: italic;
+            pointer-events: none;
+            animation: drift 30s infinite linear;
+            z-index: 2;
+        }
+
+        .floating-word:nth-child(1) { top: 20%; left: -10%; animation-duration: 35s; }
+        .floating-word:nth-child(2) { top: 60%; left: -10%; animation-duration: 45s; animation-delay: 10s; }
+        .floating-word:nth-child(3) { top: 40%; left: -10%; animation-duration: 40s; animation-delay: 20s; }
+        .floating-word:nth-child(4) { top: 80%; left: -10%; animation-duration: 50s; animation-delay: 5s; }
+
+        @keyframes drift {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(120vw); }
+        }
+
+        /* =========================================
+           Heritage Statement
+           ========================================= */
+        .heritage {
+            background-color: var(--bg-pure);
+            padding: var(--spacing-section) 0;
+        }
+
+        .heritage-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 6rem;
+            align-items: center;
+        }
+
+        .heritage-text h2 {
+            font-size: 3.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .heritage-text p {
+            font-size: 1.125rem;
+            color: #666;
+            margin-bottom: 1.5rem;
+        }
+
+        .heritage-location {
+            margin-top: 3rem;
+            padding-top: 2rem;
+            border-top: 1px solid var(--border-light);
+        }
+
+        .heritage-location p {
+            font-family: var(--font-serif);
+            font-size: 1.5rem;
+            font-style: italic;
+            color: var(--black-matte);
+            margin: 0;
+        }
+
+        .heritage-image {
+            height: 600px;
+            background-color: var(--bg-alabaster);
+            background-image: url('https://images.unsplash.com/photo-1513519245088-0e12902e5a38?q=80&w=2000&auto=format&fit=crop');
+            background-size: cover;
+            background-position: center;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.08);
+            transition: transform 0.5s var(--transition-smooth);
+        }
+
+        .heritage-image:hover {
+            transform: scale(1.02);
+        }
+
+        /* =========================================
+           Dynamic Collection Viewer
+           ========================================= */
+        .collection-viewer {
+            display: none; 
+            padding: var(--spacing-section) 0;
+            background-color: var(--bg-alabaster);
+            min-height: 80vh;
+        }
+
+        .collection-viewer.active {
+            display: block;
+            animation: fadeIn 0.6s ease;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .viewer-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            margin-bottom: 4rem;
+            border-bottom: 1px solid var(--border-light);
+            padding-bottom: 2rem;
+        }
+
+        .viewer-header h2 {
+            font-size: 3.5rem;
+        }
+
+        .viewer-header p {
+            font-size: 1.125rem;
+            color: #666;
+            max-width: 600px;
+            margin-top: 1rem;
+        }
+
+        .back-btn {
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: var(--charcoal);
+            cursor: pointer;
+            border-bottom: 1px solid var(--gold);
+            padding-bottom: 0.25rem;
+            transition: color 0.3s ease;
+            white-space: nowrap;
+        }
+
+        .back-btn:hover {
+            color: var(--gold);
+        }
+
+        .product-display-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 3rem 2rem;
+        }
+
+        .product-item {
+            display: flex;
+            flex-direction: column;
+            background: var(--bg-pure);
+            padding: 1.5rem;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.02);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .product-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.08);
+        }
+
+        .product-item img {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+            margin-bottom: 1.5rem;
+            transition: transform 0.5s ease;
+        }
+
+        .product-item:hover img {
+            transform: scale(1.03);
+        }
+
+        .product-item h3 {
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .product-item p {
+            font-size: 0.9rem;
+            color: #777;
+            line-height: 1.5;
+        }
+
+        /* =========================================
+           Static Featured Catalog (Landing Page)
+           ========================================= */
+        .catalog-featured {
+            padding: var(--spacing-section) 0;
+            background-color: var(--bg-alabaster);
+        }
+
+        .section-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            margin-bottom: 5rem;
+            border-bottom: 1px solid var(--border-light);
+            padding-bottom: 2rem;
+        }
+
+        .section-header h2 {
+            font-size: 3rem;
+        }
+
+        .catalog-grid {
+            display: grid;
+            grid-template-columns: repeat(12, 1fr);
+            gap: 2rem;
+        }
+
+        .product-card {
+            position: relative;
+            overflow: hidden;
+            cursor: pointer;
+            background-color: var(--bg-pure);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.03);
+            transition: transform 0.5s var(--transition-smooth), box-shadow 0.5s var(--transition-smooth);
+            transform-style: preserve-3d;
+            perspective: 1000px;
+        }
+
+        .product-card:hover {
+            transform: translateY(-10px) rotateX(2deg) rotateY(2deg);
+            box-shadow: 0 30px 60px rgba(0,0,0,0.12);
+        }
+
+        .product-card img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.8s var(--transition-smooth);
+        }
+
+        .product-card:hover img {
+            transform: scale(1.08);
+        }
+
+        .product-info {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            padding: 2.5rem;
+            background: linear-gradient(to top, rgba(17,17,17,0.95) 0%, transparent 100%);
+            color: var(--bg-pure);
+            transition: padding 0.3s ease;
+        }
+
+        .product-card:hover .product-info {
+            padding-bottom: 3rem;
+        }
+
+        .product-info h3 {
+            color: var(--bg-pure);
+            font-size: 2rem;
+            margin-bottom: 0.25rem;
+        }
+
+        .product-info p {
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: var(--gold);
+        }
+
+        .card-1 { grid-column: span 7; height: 550px; }
+        .card-2 { grid-column: span 5; height: 550px; margin-top: 4rem; }
+        .card-3 { grid-column: span 4; height: 450px; }
+        .card-4 { grid-column: span 8; height: 450px; }
+
+        /* =========================================
+           B2B Infrastructure
+           ========================================= */
+        .infrastructure {
+            background-color: var(--bg-pure);
+            padding: var(--spacing-section) 0;
+            border-top: 1px solid var(--border-light);
+        }
+
+        .infra-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 6rem;
+        }
+
+        .infra-left h2 {
+            font-size: 3.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .infra-left p {
+            font-size: 1.125rem;
+            color: #666;
+            margin-bottom: 3rem;
+        }
+
+        .infra-stats {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+        }
+
+        .stat-item h4 {
+            font-family: var(--font-sans);
+            font-size: 2.5rem;
+            color: var(--gold);
+            font-weight: 300;
+            margin-bottom: 0.5rem;
+        }
+
+        .stat-item p {
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: var(--charcoal);
+            margin: 0;
+        }
+
+        .infra-list {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+        }
+
+        .infra-item {
+            border-bottom: 1px solid var(--border-light);
+            padding-bottom: 2rem;
+            transition: transform 0.3s ease, padding-left 0.3s ease;
+        }
+
+        .infra-item:hover {
+            transform: translateX(10px);
+            padding-left: 10px;
+        }
+
+        .infra-item:last-child {
+            border-bottom: none;
+        }
+
+        .infra-item h4 {
+            font-family: var(--font-sans);
+            font-size: 1.125rem;
+            font-weight: 500;
+            margin-bottom: 0.5rem;
+        }
+
+        .infra-item p {
+            font-size: 0.95rem;
+            color: #777;
+        }
+
+        /* =========================================
+           Inquiries Portal
+           ========================================= */
+        .inquiry {
+            background-color: var(--black-matte);
+            color: var(--bg-pure);
+            padding: var(--spacing-section) 0;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .inquiry::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -20%;
+            width: 600px;
+            height: 600px;
+            background: radial-gradient(circle, rgba(197, 168, 128, 0.08) 0%, transparent 70%);
+            pointer-events: none;
+        }
+
+        .inquiry .container {
+            display: grid;
+            grid-template-columns: 1fr 1.5fr;
+            gap: 6rem;
+            position: relative;
+            z-index: 1;
+        }
+
+        .inquiry-info h2 {
+            color: var(--bg-pure);
+            font-size: 3.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .inquiry-info p {
+            color: #999;
+            margin-bottom: 3rem;
+        }
+
+        .contact-details {
+            font-size: 0.95rem;
+            color: #ccc;
+        }
+
+        .contact-details p {
+            margin-bottom: 1rem;
+            color: #ccc;
+        }
+
+        .contact-details strong {
+            color: var(--bg-pure);
+            font-weight: 500;
+            display: block;
+            margin-bottom: 0.25rem;
+        }
+
+        .inquiry-form {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+        }
+
+        .form-group {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .form-group.full-width {
+            grid-column: span 2;
+        }
+
+        .form-group label {
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: var(--gold);
+            margin-bottom: 0.75rem;
+        }
+
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            background: transparent;
+            border: none;
+            border-bottom: 1px solid #333;
+            padding: 0.75rem 0;
+            color: var(--bg-pure);
+            font-family: var(--font-sans);
+            font-size: 1rem;
+            transition: border-color 0.3s ease;
+        }
+
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-bottom-color: var(--gold);
+        }
+
+        .form-group select {
+            appearance: none;
+            cursor: pointer;
+        }
+
+        .form-group select option {
+            background-color: var(--black-matte);
+            color: var(--bg-pure);
+        }
+
+        .form-group textarea {
+            resize: vertical;
+            min-height: 100px;
+        }
+
+        .submit-btn {
+            grid-column: span 2;
+            background-color: var(--gold);
+            color: var(--black-matte);
+            border: none;
+            padding: 1.25rem 2rem;
+            font-family: var(--font-sans);
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 0.15em;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+            margin-top: 1rem;
+        }
+
+        .submit-btn:hover {
+            background-color: #D4B896;
+            transform: translateY(-2px);
+        }
+
+        /* =========================================
+           Footer
+           ========================================= */
+        footer {
+            background-color: var(--black-matte);
+            border-top: 1px solid #222;
+            padding: 2rem 0;
+            color: #666;
+            font-size: 0.8rem;
+        }
+
+        .footer-inner {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        /* =========================================
+           Responsive Design
+           ========================================= */
+        @media (max-width: 1024px) {
+            .hero h1 { font-size: 3.5rem; }
+            .hero-content { width: 70%; }
+            .hero-image { width: 50%; }
+            
+            .catalog-grid { grid-template-columns: 1fr; }
+            .product-card { grid-column: span 1 !important; margin-top: 0 !important; height: 450px !important; }
+            
+            .heritage-grid, .infra-grid, .inquiry .container { grid-template-columns: 1fr; gap: 3rem; }
+            .heritage-image { height: 400px; }
+            
+            .mega-menu { width: 450px; grid-template-columns: 1fr; }
+            .nav-logo img { height: 55px; }
+        }
+
+        @media (max-width: 768px) {
+            :root { --spacing-section: 4rem; }
+
+            .nav-logo img { height: 45px; }
+            .nav-links { display: none; }
+            .menu-toggle { display: flex; }
+
+            .hero { padding-top: 100px; min-height: auto; padding-bottom: 4rem; }
+            .hero h1 { font-size: 2.8rem; }
+            .hero-content { width: 100%; }
+            .hero-image { display: none; }
+            
+            .heritage-text h2, .section-header h2, .infra-left h2, .inquiry-info h2, .viewer-header h2 { font-size: 2.2rem; }
+            
+            .section-header { flex-direction: column; align-items: flex-start; gap: 1rem; }
+            .viewer-header { flex-direction: column; align-items: flex-start; gap: 1rem; }
+            
+            .inquiry-form { grid-template-columns: 1fr; }
+            .form-group.full-width { grid-column: span 1; }
+            .submit-btn { grid-column: span 1; }
+            
+            .product-display-grid { grid-template-columns: 1fr; }
+            .product-item img { height: 250px; }
+            
+            .footer-inner { flex-direction: column; gap: 1rem; text-align: center; }
+            
+            .mega-menu { display: none; }
+            
+            .floating-word { display: none; }
+            
+            .whatsapp-toggle {
+                width: 50px;
+                height: 50px;
+                bottom: 20px;
+                left: 20px;
+            }
+
+            .whatsapp-toggle svg {
+                width: 26px;
+                height: 26px;
+            }
+
+            .whatsapp-toggle::before {
+                width: 50px;
+                height: 50px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero h1 { font-size: 2.2rem; }
+            .hero p { font-size: 1rem; }
+            .heritage-text h2, .section-header h2, .infra-left h2, .inquiry-info h2, .viewer-header h2 { font-size: 1.8rem; }
+            .infra-stats { grid-template-columns: 1fr; gap: 1rem; }
+            .stat-item h4 { font-size: 2rem; }
+            .product-info { padding: 1.5rem; }
+            .product-info h3 { font-size: 1.5rem; }
+            .product-item { padding: 1rem; }
+            .product-item img { height: 200px; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Floating WhatsApp Button -->
+    <a href="https://wa.me/919045202717?text=Hello%20HANI%20Overseas%2C%20I%20am%20interested%20in%20your%20premium%20metal%20handicrafts.%20Could%20you%20please%20share%20more%20details%20about%20your%20collections%20and%20export%20capabilities%3F" 
+       target="_blank" 
+       rel="noopener noreferrer" 
+       class="whatsapp-toggle" 
+       title="Chat on WhatsApp">
+        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+        </svg>
+    </a>
+
+    <!-- Custom Cursor Glow -->
+    <div class="cursor-glow" id="cursorGlow"></div>
+
+    <!-- Navigation -->
+    <nav>
+        <div class="container nav-inner">
+            <div class="nav-logo">
+                <!-- REPLACE WITH YOUR ATTACHED LOGO -->
+                <img src="file:///D:/anas/logo.jpg.jpeg" alt="HANI Overseas Logo">
+            </div>
+            
+            <!-- Desktop Links -->
+            <div class="nav-links">
+                <a href="#heritage">Heritage</a>
+                
+                <!-- Collections Dropdown -->
+                <div class="dropdown">
+                    <div class="dropdown-trigger">Collections</div>
+                    <div class="mega-menu">
+                        <div class="mega-menu-item" onclick="openCollection('tableware')">
+                            <h4>Premium Tableware</h4>
+                            <p>Charger Plates & Serving Bowls</p>
+                        </div>
+                        <div class="mega-menu-item" onclick="openCollection('lighting')">
+                            <h4>Drinkware</h4>
+                            <p>Copper Bottles & Tumblers</p>
+                        </div>
+                        <div class="mega-menu-item" onclick="openCollection('furniture')">
+                            <h4>Kitchenware</h4>
+                            <p>Copper Cookware & Utensils</p>
+                        </div>
+                        <div class="mega-menu-item" onclick="openCollection('decor')">
+                            <h4>Jewellery</h4>
+                            <p>Handcrafted Copper Ornaments</p>
+                        </div>
+                    </div>
+                </div>
+
+                <a href="#infrastructure">Infrastructure</a>
+                <a href="#inquiry">Inquiries</a>
+            </div>
+
+            <!-- Mobile Menu Toggle -->
+            <div class="menu-toggle" onclick="toggleMobileMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Mobile Navigation Overlay -->
+    <div class="mobile-nav" id="mobileNav">
+        <a href="#heritage" onclick="toggleMobileMenu()">Heritage</a>
+        <div class="mobile-collections">
+            <div class="mobile-collection-title">Collections</div>
+            <div class="sub-link" onclick="openCollection('tableware'); toggleMobileMenu()">Premium Tableware</div>
+            <div class="sub-link" onclick="openCollection('lighting'); toggleMobileMenu()">Drinkware</div>
+            <div class="sub-link" onclick="openCollection('furniture'); toggleMobileMenu()">Kitchenware</div>
+            <div class="sub-link" onclick="openCollection('decor'); toggleMobileMenu()">Jewellery</div>
+        </div>
+        <a href="#infrastructure" onclick="toggleMobileMenu()">Infrastructure</a>
+        <a href="#inquiry" onclick="toggleMobileMenu()">Inquiries</a>
+    </div>
+
+    <!-- Main Content Area -->
+    <main>
+        <!-- Hero Header -->
+        <header class="hero">
+            <div class="particles-container">
+                <div class="particle"></div>
+                <div class="particle"></div>
+                <div class="particle"></div>
+                <div class="particle"></div>
+                <div class="particle"></div>
+                <div class="particle"></div>
+                <div class="particle"></div>
+                
+                <div class="floating-word">Heritage</div>
+                <div class="floating-word">Craft</div>
+                <div class="floating-word">Export</div>
+                <div class="floating-word">Legacy</div>
+            </div>
+
+            <div class="container">
+                <div class="hero-content reveal">
+                    <span class="label">Established 2026 • Moradabad, India</span>
+                    <h1>Metal Crafted for the Global Stage.</h1>
+                    <p>HANI Overseas is an ultra-premium manufacturer and exporter of artisanal metal handicrafts, bridging the legendary lineage of Moradabad craftsmanship with modern B2B scale and compliance.</p>
+                    <a href="#inquiry" class="label" style="color: var(--black-matte); border-bottom: 1px solid var(--gold); padding-bottom: 0.25rem;">Partner With Us</a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <div class="hero-image-overlay"></div>
+            </div>
+        </header>
+
+        <!-- Heritage Statement -->
+        <section class="heritage" id="heritage">
+            <div class="container heritage-grid">
+                <div class="heritage-text reveal">
+                    <span class="label">The Heritage Statement</span>
+                    <h2>A Legacy Forged in Moradabad.</h2>
+                    <p>For centuries, the city of Moradabad has been synonymous with the mastery of metal. Our factory and showroom, situated on the historic Baradari Road, harness this generational lineage.</p>
+                    <p>We combine old-world artisanship with contemporary design sensibilities, delivering bespoke metal solutions that meet the rigorous demands of elite interior designers and luxury retail chains across the Americas, Europe, and the Middle East.</p>
+                    <div class="heritage-location">
+                        <p>Baradari Road, Moradabad – 244001, U.P., India</p>
+                    </div>
+                </div>
+                <div class="heritage-image reveal"></div>
+            </div>
+        </section>
+
+        <!-- Static Featured Catalog (Landing Page View) -->
+        <section class="catalog-featured" id="catalog-featured">
+            <div class="container">
+                <div class="section-header reveal">
+                    <div>
+                        <span class="label">Our Craft</span>
+                        <h2>Curated Collections</h2>
+                    </div>
+                    <p style="max-width: 300px; font-size: 0.85rem; color: #777;">Select a category to view our full range.</p>
+                </div>
+
+                <div class="catalog-grid">
+                    <div class="product-card card-1 reveal" onclick="openCollection('tableware')">
+                        <img src="file:///D:/anas/tableware-logo.png" alt="Premium Tableware">
+                        <div class="product-info">
+                            <h3>Premium Tableware</h3>
+                            <p>Charger Plates & Serving Bowls</p>
+                        </div>
+                    </div>
+
+                    <div class="product-card card-2 reveal" onclick="openCollection('lighting')">
+                        <img src="file:///D:/anas/drinkware-logo.jpg" alt="Drinkware">
+                        <div class="product-info">
+                            <h3>Drinkware</h3>
+                            <p>Copper Bottles & Tumblers</p>
+                        </div>
+                    </div>
+
+                    <div class="product-card card-3 reveal" onclick="openCollection('furniture')">
+                        <img src="file:///D:/anas/kitchenware-logo.jpg" alt="Kitchenware">
+                        <div class="product-info">
+                            <h3>Kitchenware</h3>
+                            <p>Copper Cookware & Utensils</p>
+                        </div>
+                    </div>
+
+                    <div class="product-card card-4 reveal" onclick="openCollection('decor')">
+                        <img src="file:///D:/anas/jewellery-logo.jpg" alt="Jewellery">
+                        <div class="product-info">
+                            <h3>Jewellery</h3>
+                            <p>Handcrafted Copper Ornaments</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Dynamic Collection Viewer -->
+        <section class="collection-viewer" id="collection-viewer">
+            <div class="container">
+                <div class="viewer-header">
+                    <div>
+                        <span class="label" id="viewer-label">Collection</span>
+                        <h2 id="viewer-title">Category Name</h2>
+                        <p id="viewer-desc">Category description goes here.</p>
+                    </div>
+                    <div class="back-btn" onclick="closeCollection()">← Back to Overview</div>
+                </div>
+                <div class="product-display-grid" id="product-grid">
+                    <!-- Dynamic Product Items will be injected here by JavaScript -->
+                </div>
+            </div>
+        </section>
+
+        <!-- B2B Infrastructure Panel -->
+        <section class="infrastructure" id="infrastructure">
+            <div class="container infra-grid">
+                <div class="infra-left reveal">
+                    <span class="label">B2B Infrastructure</span>
+                    <h2>Built for Global Scale.</h2>
+                    <p>We understand the complexities of international trade. Our infrastructure is designed to support both small bespoke orders and high-volume commercial projects, without compromising on the artisanal quality that defines our brand.</p>
+                    
+                    <div class="infra-stats">
+                        <div class="stat-item">
+                            <h4>100%</h4>
+                            <p>Quality Control</p>
+                        </div>
+                        <div class="stat-item">
+                            <h4>Global</h4>
+                            <p>Shipping Compliance</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="infra-list reveal">
+                    <div class="infra-item">
+                        <h4>Flexible Manufacturing</h4>
+                        <p>Equipped to handle both boutique sample orders and large-scale commercial orders for retail chains and hospitality projects, ensuring consistent lead times.</p>
+                    </div>
+                    <div class="infra-item">
+                        <h4>Quality Assurance</h4>
+                        <p>Multi-stage QC protocols, from raw material inspection to final pre-shipment audits, ensuring zero-defect delivery.</p>
+                    </div>
+                    <div class="infra-item">
+                        <h4>International Logistics</h4>
+                        <p>Full documentation support, adherence to international packaging standards, and seamless freight coordination.</p>
+                    </div>
+                    <div class="infra-item">
+                        <h4>Custom Design Capabilities</h4>
+                        <p>In-house design team available to develop proprietary OEM/ODM collections based on your brand's specifications.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Inquiries Portal -->
+        <section class="inquiry" id="inquiry">
+            <div class="container">
+                <div class="inquiry-info reveal">
+                    <span class="label">Inquiries Portal</span>
+                    <h2>Request a Consultation.</h2>
+                    <p>We invite buyers, importers, and commercial design firms to connect with us. Whether you are looking for a single sample or a full container, we are ready to fulfill your requirements. Please provide your details below.</p>
+                    
+                    <div class="contact-details">
+                        <p>
+                            <strong>Email</strong>
+                            infohanioverseas@gmail.com
+                        </p>
+                        <p>
+                            <strong>WhatsApp</strong>
+                            +91 9045202717
+                        </p>
+                        <p>
+                            <strong>Factory & Showroom</strong>
+                            Baradari Road, Moradabad – 244001, U.P., India
+                        </p>
+                    </div>
+                </div>
+
+                <form class="inquiry-form reveal" action="#" method="POST">
+                    <div class="form-group">
+                        <label for="name">Full Name</label>
+                        <input type="text" id="name" name="name" placeholder="John Doe" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="company">Company Name</label>
+                        <input type="text" id="company" name="company" placeholder="Your Company LLC" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="country">Country of Import</label>
+                        <input type="text" id="country" name="country" placeholder="e.g. United States" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="quantity">Estimated Quantity (Flexible)</label>
+                        <select id="quantity" name="quantity" required>
+                            <option value="" disabled selected>Select quantity...</option>
+                            <option value="sample">Sample / Single Unit</option>
+                            <option value="small">Small Batch (10 - 100 units)</option>
+                            <option value="medium">Medium Batch (100 - 1,000 units)</option>
+                            <option value="large">Large Scale (1,000+ units)</option>
+                        </select>
+                    </div>
+                    <div class="form-group full-width">
+                        <label for="message">Message / Specific Requirements</label>
+                        <textarea id="message" name="message" placeholder="Please detail the product categories you are interested in (e.g., Tableware, Drinkware, Kitchenware, Jewellery, OEM)."></textarea>
+                    </div>
+                    <button type="submit" class="submit-btn">Submit Inquiry</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container footer-inner">
+            <p>&copy; 2026 HANI Overseas. All rights reserved.</p>
+            <p>Handicrafts Manufacturer & Exporter | Moradabad, India</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+        // =========================================
+        // COLLECTIONS DATA STRUCTURE
+        // =========================================
+        const collectionsData = {
+            // -------------------------------------
+            // 1. PREMIUM TABLEWARE
+            // -------------------------------------
+            tableware: {
+                title: "Premium Tableware",
+                label: "Collection",
+                description: "Hotel and restaurant-grade metal tableware including charger plates, serving bowls, and elegant dining accessories. Handcrafted from premium copper and brass for durability, elegance, and high-volume commercial use. Available for orders of any size.",
+                products: [
+                    { 
+                        img: "file:///D:/anas/table/TABLE%20WARES/CHARGER%20PLATES%20AND%20SERVING%20BOWL/1788243135858.png", 
+                        name: "Hammered Copper Charger Plate", 
+                        desc: "Hand-hammered copper charger plate with a warm matte finish. Ideal for fine dining presentations and banquet service." 
+                    },
+                    { 
+                        img: "file:///D:/anas/table/TABLE%20WARES/CHARGER%20PLATES%20AND%20SERVING%20BOWL/1788243230952.png", 
+                        name: "Brass Serving Bowl", 
+                        desc: "Solid brass serving bowl with etched detailing. Perfect for salads, fruits, and decorative table displays." 
+                    },
+                    { 
+                        img: "file:///D:/anas/table/TABLE%20WARES/CHARGER%20PLATES%20AND%20SERVING%20BOWL/1788243264912.png", 
+                        name: "Copper Serving Bowl Set", 
+                        desc: "Set of nested copper serving bowls with a polished finish. Available in multiple sizes for catering operations." 
+                    },
+                    { 
+                        img: "file:///D:/anas/table/TABLE%20WARES/CHARGER%20PLATES%20AND%20SERVING%20BOWL/1788243328299.png", 
+                        name: "Engraved Brass Platter", 
+                        desc: "Ornately engraved brass platter inspired by traditional Moradabad craftsmanship. A statement piece for luxury tables." 
+                    },
+                    { 
+                        img: "file:///D:/anas/table/TABLE%20WARES/CHARGER%20PLATES%20AND%20SERVING%20BOWL/1788243364016.png", 
+                        name: "Hammered Copper Tray", 
+                        desc: "Traditional hand-hammered copper tray. Ideal for serving tea, coffee, or as a decorative centerpiece." 
+                    },
+                    { 
+                        img: "file:///D:/anas/table/TABLE%20WARES/CHARGER%20PLATES%20AND%20SERVING%20BOWL/1788243417875.png", 
+                        name: "Copper Dinner Plate", 
+                        desc: "Premium copper dinner plate with a smooth finish. Combines elegance with the health benefits of copper dining." 
+                    },
+                    { 
+                        img: "file:///D:/anas/table/TABLE%20WARES/CHARGER%20PLATES%20AND%20SERVING%20BOWL/1788243462732.png", 
+                        name: "Brass Charger Plate", 
+                        desc: "Classic brass charger plate with a mirror-polished finish. Perfect for upscale restaurants and hotels." 
+                    },
+                    { 
+                        img: "file:///D:/anas/table/TABLE%20WARES/CHARGER%20PLATES%20AND%20SERVING%20BOWL/1788243596575.png", 
+                        name: "Copper Serving Platter", 
+                        desc: "Wide copper serving platter with raised edges. Designed for banquet and buffet-style service." 
+                    },
+                    { 
+                        img: "file:///D:/anas/table/TABLE%20WARES/CHARGER%20PLATES%20AND%20SERVING%20BOWL/1788243646896.png", 
+                        name: "Decorative Copper Bowl", 
+                        desc: "Artistically crafted copper bowl with hammered texture. A beautiful accent for dining and display." 
+                    },
+                    { 
+                        img: "file:///D:/anas/table/TABLE%20WARES/CHARGER%20PLATES%20AND%20SERVING%20BOWL/1788243697999.png", 
+                        name: "Brass Serving Platter", 
+                        desc: "Elegant brass serving platter with intricate border detailing. Custom sizes available for OEM orders." 
+                    },
+                    { 
+                        img: "file:///D:/anas/table/TABLE%20WARES/CHARGER%20PLATES%20AND%20SERVING%20BOWL/1788243793533.png", 
+                        name: "Hammered Serving Bowl", 
+                        desc: "Traditional hammered metal serving bowl. Available in copper and brass finishes." 
+                    }
+                ]
+            },
+
+            // -------------------------------------
+            // 2. DRINKWARE
+            // -------------------------------------
+            lighting: {
+                title: "Drinkware",
+                label: "Collection",
+                description: "Premium copper drinkware including bottles, tumblers, and mugs. Handcrafted to preserve the traditional wellness benefits of copper while delivering elegant design for modern hospitality and retail.",
+                products: [
+                    { 
+                        img: "file:///D:/anas/copper/copper%20wares/COPPER%20BOTTLES/1788248069919.png", 
+                        name: "Copper Water Bottle", 
+                        desc: "Handcrafted pure copper water bottle. Traditional design with a leak-proof cap, ideal for daily wellness use." 
+                    },
+                    { 
+                        img: "file:///D:/anas/copper/copper%20wares/COPPER%20BOTTLES/1788247530139.png", 
+                        name: "Hammered Copper Bottle", 
+                        desc: "Textured hammered copper bottle with a polished finish. A premium addition to any drinkware collection." 
+                    },
+                    { 
+                        img: "file:///D:/anas/copper/copper%20wares/COPPER%20BOTTLES/1788247570884.png", 
+                        name: "Copper Tumbler Set", 
+                        desc: "Set of copper tumblers with a smooth interior. Ideal for serving water, cocktails, or traditional beverages." 
+                    },
+                    { 
+                        img: "file:///D:/anas/copper/copper%20wares/COPPER%20BOTTLES/1788247627406.png", 
+                        name: "Copper Water Bottle - Classic", 
+                        desc: "Classic copper bottle with a minimalist silhouette. Available in multiple capacities for retail and hospitality." 
+                    },
+                    { 
+                        img: "file:///D:/anas/copper/copper%20wares/COPPER%20BOTTLES/1788247689921.png", 
+                        name: "Engraved Copper Bottle", 
+                        desc: "Elegantly engraved copper bottle. Custom engraving available for corporate and private-label orders." 
+                    },
+                    { 
+                        img: "file:///D:/anas/copper/copper%20wares/COPPER%20BOTTLES/1788247834245.png", 
+                        name: "Copper Mug", 
+                        desc: "Traditional copper mug for hot and cold beverages. Keeps drinks at the ideal temperature for longer." 
+                    }
+                ]
+            },
+
+            // -------------------------------------
+            // 3. KITCHENWARE
+            // -------------------------------------
+            furniture: {
+                title: "Kitchenware",
+                label: "Collection",
+                description: "Premium copper kitchenware including cookware, utensils, and serving tools. Combining traditional Indian craftsmanship with modern functionality for professional and home kitchens alike.",
+                products: [
+                    { 
+                        img: "file:///D:/anas/copper/copper%20wares/kitchen%20wares%20copper/1788279030839.png", 
+                        name: "Copper Cooking Pot", 
+                        desc: "Handcrafted copper cooking pot with a sturdy handle. Excellent heat conductivity for professional kitchens." 
+                    },
+                    { 
+                        img: "file:///D:/anas/copper/copper%20wares/kitchen%20wares%20copper/1788279127577.png", 
+                        name: "Copper Serving Ladle", 
+                        desc: "Traditional copper ladle with an ergonomic handle. Ideal for serving soups, curries, and gravies." 
+                    },
+                    { 
+                        img: "file:///D:/anas/copper/copper%20wares/kitchen%20wares%20copper/1788279309769.png", 
+                        name: "Copper Kitchen Set", 
+                        desc: "Complete copper kitchen set including pots and pans. Available in custom configurations for retail." 
+                    },
+                    { 
+                        img: "file:///D:/anas/copper/copper%20wares/kitchen%20wares%20copper/1788279715398.png", 
+                        name: "Copper Frying Pan", 
+                        desc: "Heavy-gauge copper frying pan. Offers superior heat distribution for professional and home cooking." 
+                    }, 
+                    { 
+                        img: "file:///D:/anas/copper/copper%20wares/kitchen%20wares%20copper/1788280041869.png", 
+                        name: "Copper Utensil Set", 
+                        desc: "Set of copper cooking utensils with comfortable grips. Durable and elegantly finished." 
+                    },
+                    { 
+                        img: "file:///D:/anas/copper/copper%20wares/kitchen%20wares%20copper/1788279853222.png", 
+                        name: "Copper Storage Container", 
+                        desc: "Airtight copper storage container. Keeps ingredients fresh while adding a premium touch to any kitchen." 
+                    },
+                    { 
+                        img: "file:///D:/anas/copper/copper%20wares/kitchen%20wares%20copper/1788279915891.png", 
+                        name: "Copper Measuring Cups", 
+                        desc: "Set of copper measuring cups with clear markings. A functional and beautiful kitchen accessory." 
+                    }
+                ]
+            },
+
+            // -------------------------------------
+            // 4. JEWELLERY
+            // -------------------------------------
+            decor: {
+                title: "Jewellery",
+                label: "Collection",
+                description: "Handcrafted copper and brass jewellery including necklaces, earrings, bangles, and pendants. Each piece blends traditional Moradabad artistry with contemporary design for luxury retail and boutique collections.",
+                products: [
+                    { 
+                        img: "file:///D:/anas/copper/copper%20wares/copper%20jewellery/1788288313595.png", 
+                        name: "Copper Necklace", 
+                        desc: "Handcrafted copper necklace with intricate detailing. A statement piece for luxury retail collections." 
+                    },
+                    { 
+                        img: "file:///D:/anas/copper/copper%20wares/copper%20jewellery/1788288407756.png", 
+                        name: "Copper Earrings", 
+                        desc: "Elegant copper earrings with a polished finish. Lightweight and comfortable for all-day wear." 
+                    },
+                    { 
+                        img: "file:///D:/anas/copper/copper%20wares/copper%20jewellery/1788288664360.png", 
+                        name: "Copper Bangle Set", 
+                        desc: "Set of copper bangles with traditional etched patterns. Available in multiple sizes for boutique orders." 
+                    },
+                    { 
+                        img: "file:///D:/anas/copper/copper%20wares/copper%20jewellery/1788288616494.png", 
+                        name: "Copper Pendant", 
+                        desc: "Artistic copper pendant with a detailed motif. Perfect for adding to a curated jewellery line." 
+                    },
+                    { 
+                        img: "file:///D:/anas/copper/copper%20wares/copper%20jewellery/1788288712685.png", 
+                        name: "Copper Bracelet", 
+                        desc: "Handcrafted copper bracelet with a smooth finish. A timeless accessory for men and women." 
+                    },
+                    { 
+                        img: "file:///D:/anas/copper/copper%20wares/copper%20jewellery/1788288870351.png", 
+                        name: "Copper Ring", 
+                        desc: "Handcrafted copper ring with subtle detailing. Available for custom sizing and private-label orders." 
+                    }
+                ]
+            }
+        };
+
+        // =========================================
+        // 2. Function to Open a Collection
+        // =========================================
+        function openCollection(categoryKey) {
+            const data = collectionsData[categoryKey];
+            if (!data) return;
+
+            document.getElementById('viewer-title').innerText = data.title;
+            document.getElementById('viewer-label').innerText = data.label;
+            document.getElementById('viewer-desc').innerText = data.description;
+
+            const productGrid = document.getElementById('product-grid');
+            productGrid.innerHTML = '';
+
+            data.products.forEach(product => {
+                const productHTML = `
+                    <div class="product-item">
+                        <img src="${product.img}" alt="${product.name}">
+                        <h3>${product.name}</h3>
+                        <p>${product.desc}</p>
+                    </div>
+                `;
+                productGrid.innerHTML += productHTML;
+            });
+
+            document.getElementById('catalog-featured').style.display = 'none';
+            document.getElementById('collection-viewer').classList.add('active');
+            document.getElementById('collection-viewer').scrollIntoView({ behavior: 'smooth' });
+        }
+
+        // =========================================
+        // 3. Function to Close a Collection
+        // =========================================
+        function closeCollection() {
+            document.getElementById('collection-viewer').classList.remove('active');
+            document.getElementById('catalog-featured').style.display = 'block';
+            document.getElementById('catalog-featured').scrollIntoView({ behavior: 'smooth' });
+        }
+
+        // =========================================
+        // 4. Mobile Menu Toggle
+        // =========================================
+        function toggleMobileMenu() {
+            const mobileNav = document.getElementById('mobileNav');
+            mobileNav.classList.toggle('active');
+            
+            const spans = document.querySelectorAll('.menu-toggle span');
+            if (mobileNav.classList.contains('active')) {
+                spans[0].style.transform = 'rotate(45deg) translate(5px, 6px)';
+                spans[1].style.opacity = '0';
+                spans[2].style.transform = 'rotate(-45deg) translate(5px, -6px)';
+            } else {
+                spans[0].style.transform = 'none';
+                spans[1].style.opacity = '1';
+                spans[2].style.transform = 'none';
+            }
+        }
+
+        // =========================================
+        // 5. Custom Cursor Glow
+        // =========================================
+        const cursorGlow = document.getElementById('cursorGlow');
+        let mouseX = 0, mouseY = 0;
+        let glowX = 0, glowY = 0;
+
+        document.addEventListener('mousemove', (e) => {
+            mouseX = e.clientX;
+            mouseY = e.clientY;
+            cursorGlow.style.opacity = '1';
+        });
+
+        document.addEventListener('mouseleave', () => {
+            cursorGlow.style.opacity = '0';
+        });
+
+        function animateCursor() {
+            glowX += (mouseX - glowX) * 0.1;
+            glowY += (mouseY - glowY) * 0.1;
+            cursorGlow.style.left = glowX + 'px';
+            cursorGlow.style.top = glowY + 'px';
+            requestAnimationFrame(animateCursor);
+        }
+        animateCursor();
+
+        // =========================================
+        // 6. Scroll Reveal Animations
+        // =========================================
+        const revealElements = document.querySelectorAll('.reveal');
+        
+        const revealObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                    revealObserver.unobserve(entry.target);
+                }
+            });
+        }, {
+            threshold: 0.15,
+            rootMargin: "0px 0px -50px 0px"
+        });
+
+        revealElements.forEach(el => revealObserver.observe(el));
+
+    </script>
+
+</body>
+</html>
