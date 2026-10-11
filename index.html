@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"><
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HANI Overseas | Premium Metal Handicrafts & Export</title>
     
     <!-- Premium Typography -->
@@ -42,7 +42,6 @@
         }
 
         body {
-            /* Animated Shimmering Gradient Background */
             background: linear-gradient(135deg, #FFFFFF 0%, #FBFBFA 25%, #F5F4F2 50%, #FBFBFA 75%, #FFFFFF 100%);
             background-size: 400% 400%;
             animation: gradientShift 20s ease infinite;
@@ -59,7 +58,6 @@
             100% { background-position: 0% 50%; }
         }
 
-        /* Custom Animated Cursor Glow */
         .cursor-glow {
             position: fixed;
             width: 400px;
@@ -73,9 +71,7 @@
             opacity: 0;
         }
 
-        /* =========================================
-           Floating WhatsApp Button
-           ========================================= */
+        /* Floating WhatsApp Button */
         .whatsapp-toggle {
             position: fixed;
             bottom: 30px;
@@ -123,9 +119,6 @@
             100% { transform: scale(1.5); opacity: 0; }
         }
 
-        /* =========================================
-           Typography & Global Elements
-           ========================================= */
         h1, h2, h3, h4 {
             font-family: var(--font-serif);
             font-weight: 400;
@@ -133,15 +126,8 @@
             line-height: 1.1;
         }
 
-        p {
-            font-size: 1rem;
-            font-weight: 300;
-        }
-
-        a {
-            text-decoration: none;
-            color: inherit;
-        }
+        p { font-size: 1rem; font-weight: 300; }
+        a { text-decoration: none; color: inherit; }
 
         .container {
             max-width: 1400px;
@@ -160,7 +146,6 @@
             margin-bottom: 1rem;
         }
 
-        /* Scroll Reveal Animation Classes */
         .reveal {
             opacity: 0;
             transform: translateY(40px);
@@ -172,9 +157,7 @@
             transform: translateY(0);
         }
 
-        /* =========================================
-           Navigation & Mega Menu
-           ========================================= */
+        /* Navigation */
         nav {
             position: fixed;
             top: 0;
@@ -201,9 +184,7 @@
             transition: height 0.3s ease, transform 0.3s ease;
         }
 
-        .nav-logo img:hover {
-            transform: scale(1.05);
-        }
+        .nav-logo img:hover { transform: scale(1.05); }
 
         .nav-links {
             display: flex;
@@ -222,14 +203,9 @@
             padding: 0.5rem 0;
         }
 
-        .nav-links > a:hover, .dropdown-trigger:hover {
-            color: var(--gold);
-        }
+        .nav-links > a:hover, .dropdown-trigger:hover { color: var(--gold); }
 
-        /* Mega Menu Dropdown */
-        .dropdown {
-            position: relative;
-        }
+        .dropdown { position: relative; }
 
         .dropdown-trigger {
             display: flex;
@@ -314,7 +290,6 @@
             margin: 0;
         }
 
-        /* Mobile Menu Toggle */
         .menu-toggle {
             display: none;
             flex-direction: column;
@@ -332,7 +307,6 @@
             transition: all 0.3s ease;
         }
 
-        /* Mobile Navigation Overlay */
         .mobile-nav {
             position: fixed;
             top: 0;
@@ -351,9 +325,7 @@
             z-index: 999;
         }
 
-        .mobile-nav.active {
-            right: 0;
-        }
+        .mobile-nav.active { right: 0; }
 
         .mobile-nav a, .mobile-nav .mobile-collection-title {
             font-family: var(--font-serif);
@@ -362,9 +334,7 @@
             cursor: pointer;
         }
 
-        .mobile-nav a:hover, .mobile-nav .mobile-collection-title:hover {
-            color: var(--gold);
-        }
+        .mobile-nav a:hover, .mobile-nav .mobile-collection-title:hover { color: var(--gold); }
 
         .mobile-collections {
             display: flex;
@@ -380,13 +350,9 @@
             cursor: pointer;
         }
 
-        .mobile-collections .sub-link:hover {
-            color: var(--gold);
-        }
+        .mobile-collections .sub-link:hover { color: var(--gold); }
 
-        /* =========================================
-           Hero Header
-           ========================================= */
+        /* Hero */
         .hero {
             min-height: 100vh;
             display: flex;
@@ -440,7 +406,6 @@
             background: linear-gradient(to right, #FFFFFF 0%, transparent 100%);
         }
 
-        /* Floating Particles & Words */
         .particles-container {
             position: absolute;
             top: 0;
@@ -496,9 +461,7 @@
             100% { transform: translateX(120vw); }
         }
 
-        /* =========================================
-           Heritage Statement
-           ========================================= */
+        /* Heritage */
         .heritage {
             background-color: var(--bg-pure);
             padding: var(--spacing-section) 0;
@@ -546,13 +509,9 @@
             transition: transform 0.5s var(--transition-smooth);
         }
 
-        .heritage-image:hover {
-            transform: scale(1.02);
-        }
+        .heritage-image:hover { transform: scale(1.02); }
 
-        /* =========================================
-           Dynamic Collection Viewer
-           ========================================= */
+        /* Collection Viewer */
         .collection-viewer {
             display: none; 
             padding: var(--spacing-section) 0;
@@ -579,9 +538,7 @@
             padding-bottom: 2rem;
         }
 
-        .viewer-header h2 {
-            font-size: 3.5rem;
-        }
+        .viewer-header h2 { font-size: 3.5rem; }
 
         .viewer-header p {
             font-size: 1.125rem;
@@ -602,9 +559,7 @@
             white-space: nowrap;
         }
 
-        .back-btn:hover {
-            color: var(--gold);
-        }
+        .back-btn:hover { color: var(--gold); }
 
         .product-display-grid {
             display: grid;
@@ -634,9 +589,7 @@
             transition: transform 0.5s ease;
         }
 
-        .product-item:hover img {
-            transform: scale(1.03);
-        }
+        .product-item:hover img { transform: scale(1.03); }
 
         .product-item h3 {
             font-size: 1.5rem;
@@ -649,9 +602,7 @@
             line-height: 1.5;
         }
 
-        /* =========================================
-           Static Featured Catalog (Landing Page)
-           ========================================= */
+        /* Catalog Featured */
         .catalog-featured {
             padding: var(--spacing-section) 0;
             background-color: var(--bg-alabaster);
@@ -666,9 +617,7 @@
             padding-bottom: 2rem;
         }
 
-        .section-header h2 {
-            font-size: 3rem;
-        }
+        .section-header h2 { font-size: 3rem; }
 
         .catalog-grid {
             display: grid;
@@ -699,9 +648,7 @@
             transition: transform 0.8s var(--transition-smooth);
         }
 
-        .product-card:hover img {
-            transform: scale(1.08);
-        }
+        .product-card:hover img { transform: scale(1.08); }
 
         .product-info {
             position: absolute;
@@ -714,9 +661,7 @@
             transition: padding 0.3s ease;
         }
 
-        .product-card:hover .product-info {
-            padding-bottom: 3rem;
-        }
+        .product-card:hover .product-info { padding-bottom: 3rem; }
 
         .product-info h3 {
             color: var(--bg-pure);
@@ -736,9 +681,7 @@
         .card-3 { grid-column: span 4; height: 450px; }
         .card-4 { grid-column: span 8; height: 450px; }
 
-        /* =========================================
-           B2B Infrastructure
-           ========================================= */
+        /* Infrastructure */
         .infrastructure {
             background-color: var(--bg-pure);
             padding: var(--spacing-section) 0;
@@ -801,9 +744,7 @@
             padding-left: 10px;
         }
 
-        .infra-item:last-child {
-            border-bottom: none;
-        }
+        .infra-item:last-child { border-bottom: none; }
 
         .infra-item h4 {
             font-family: var(--font-sans);
@@ -817,9 +758,7 @@
             color: #777;
         }
 
-        /* =========================================
-           Inquiries Portal
-           ========================================= */
+        /* Inquiry */
         .inquiry {
             background-color: var(--black-matte);
             color: var(--bg-pure);
@@ -881,14 +820,8 @@
             gap: 2rem;
         }
 
-        .form-group {
-            display: flex;
-            flex-direction: column;
-        }
-
-        .form-group.full-width {
-            grid-column: span 2;
-        }
+        .form-group { display: flex; flex-direction: column; }
+        .form-group.full-width { grid-column: span 2; }
 
         .form-group label {
             font-size: 0.75rem;
@@ -918,10 +851,7 @@
             border-bottom-color: var(--gold);
         }
 
-        .form-group select {
-            appearance: none;
-            cursor: pointer;
-        }
+        .form-group select { appearance: none; cursor: pointer; }
 
         .form-group select option {
             background-color: var(--black-matte);
@@ -954,9 +884,12 @@
             transform: translateY(-2px);
         }
 
-        /* =========================================
-           Footer
-           ========================================= */
+        .submit-btn:disabled {
+            opacity: 0.6;
+            cursor: not-allowed;
+        }
+
+        /* Footer */
         footer {
             background-color: var(--black-matte);
             border-top: 1px solid #222;
@@ -971,9 +904,105 @@
             align-items: center;
         }
 
-        /* =========================================
-           Responsive Design
-           ========================================= */
+        /* Inquiry Popup */
+        .inquiry-popup-overlay {
+            position: fixed;
+            inset: 0;
+            background: rgba(17, 17, 17, 0.65);
+            backdrop-filter: blur(8px);
+            -webkit-backdrop-filter: blur(8px);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 100000;
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity 0.4s ease, visibility 0.4s ease;
+            padding: 1.5rem;
+        }
+
+        .inquiry-popup-overlay.active {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .inquiry-popup {
+            background: var(--bg-pure);
+            max-width: 480px;
+            width: 100%;
+            padding: 3.5rem 3rem;
+            text-align: center;
+            box-shadow: 0 30px 80px rgba(0, 0, 0, 0.25);
+            border-top: 3px solid var(--gold);
+            transform: translateY(30px) scale(0.96);
+            transition: transform 0.5s var(--transition-smooth);
+            position: relative;
+        }
+
+        .inquiry-popup-overlay.active .inquiry-popup {
+            transform: translateY(0) scale(1);
+        }
+
+        .popup-icon {
+            width: 64px;
+            height: 64px;
+            margin: 0 auto 1.5rem;
+        }
+
+        .popup-icon svg { width: 100%; height: 100%; }
+
+        .popup-label {
+            font-family: var(--font-sans);
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 0.2em;
+            color: var(--gold);
+            font-weight: 500;
+            display: block;
+            margin-bottom: 0.75rem;
+        }
+
+        .popup-title {
+            font-family: var(--font-serif);
+            font-size: 2.5rem;
+            color: var(--black-matte);
+            margin-bottom: 1.25rem;
+            line-height: 1.1;
+        }
+
+        .popup-message {
+            font-size: 0.95rem;
+            color: #666;
+            line-height: 1.6;
+            margin-bottom: 2.5rem;
+        }
+
+        .popup-message strong {
+            color: var(--charcoal);
+            font-weight: 500;
+        }
+
+        .popup-btn {
+            background-color: var(--black-matte);
+            color: var(--bg-pure);
+            border: none;
+            padding: 1rem 2.5rem;
+            font-family: var(--font-sans);
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 0.15em;
+            font-weight: 500;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+
+        .popup-btn:hover {
+            background-color: var(--gold);
+            color: var(--black-matte);
+            transform: translateY(-2px);
+        }
+
+        /* Responsive */
         @media (max-width: 1024px) {
             .hero h1 { font-size: 3.5rem; }
             .hero-content { width: 70%; }
@@ -1016,7 +1045,6 @@
             .footer-inner { flex-direction: column; gap: 1rem; text-align: center; }
             
             .mega-menu { display: none; }
-            
             .floating-word { display: none; }
             
             .whatsapp-toggle {
@@ -1026,15 +1054,8 @@
                 left: 20px;
             }
 
-            .whatsapp-toggle svg {
-                width: 26px;
-                height: 26px;
-            }
-
-            .whatsapp-toggle::before {
-                width: 50px;
-                height: 50px;
-            }
+            .whatsapp-toggle svg { width: 26px; height: 26px; }
+            .whatsapp-toggle::before { width: 50px; height: 50px; }
         }
 
         @media (max-width: 480px) {
@@ -1047,114 +1068,9 @@
             .product-info h3 { font-size: 1.5rem; }
             .product-item { padding: 1rem; }
             .product-item img { height: 200px; }
+            .inquiry-popup { padding: 2.5rem 1.75rem; }
+            .popup-title { font-size: 2rem; }
         }
-        /* =========================================
-   Inquiry Success Popup
-   ========================================= */
-.inquiry-popup-overlay {
-    position: fixed;
-    inset: 0;
-    background: rgba(17, 17, 17, 0.65);
-    backdrop-filter: blur(8px);
-    -webkit-backdrop-filter: blur(8px);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 100000;
-    opacity: 0;
-    visibility: hidden;
-    transition: opacity 0.4s ease, visibility 0.4s ease;
-    padding: 1.5rem;
-}
-
-.inquiry-popup-overlay.active {
-    opacity: 1;
-    visibility: visible;
-}
-
-.inquiry-popup {
-    background: var(--bg-pure);
-    max-width: 480px;
-    width: 100%;
-    padding: 3.5rem 3rem;
-    text-align: center;
-    box-shadow: 0 30px 80px rgba(0, 0, 0, 0.25);
-    border-top: 3px solid var(--gold);
-    transform: translateY(30px) scale(0.96);
-    transition: transform 0.5s var(--transition-smooth);
-    position: relative;
-}
-
-.inquiry-popup-overlay.active .inquiry-popup {
-    transform: translateY(0) scale(1);
-}
-
-.popup-icon {
-    width: 64px;
-    height: 64px;
-    margin: 0 auto 1.5rem;
-}
-
-.popup-icon svg {
-    width: 100%;
-    height: 100%;
-}
-
-.popup-label {
-    font-family: var(--font-sans);
-    font-size: 0.75rem;
-    text-transform: uppercase;
-    letter-spacing: 0.2em;
-    color: var(--gold);
-    font-weight: 500;
-    display: block;
-    margin-bottom: 0.75rem;
-}
-
-.popup-title {
-    font-family: var(--font-serif);
-    font-size: 2.5rem;
-    color: var(--black-matte);
-    margin-bottom: 1.25rem;
-    line-height: 1.1;
-}
-
-.popup-message {
-    font-size: 0.95rem;
-    color: #666;
-    line-height: 1.6;
-    margin-bottom: 2.5rem;
-}
-
-.popup-message strong {
-    color: var(--charcoal);
-    font-weight: 500;
-}
-
-.popup-btn {
-    background-color: var(--black-matte);
-    color: var(--bg-pure);
-    border: none;
-    padding: 1rem 2.5rem;
-    font-family: var(--font-sans);
-    font-size: 0.8rem;
-    text-transform: uppercase;
-    letter-spacing: 0.15em;
-    font-weight: 500;
-    cursor: pointer;
-    transition: background-color 0.3s ease, transform 0.3s ease;
-}
-
-.popup-btn:hover {
-    background-color: var(--gold);
-    color: var(--black-matte);
-    transform: translateY(-2px);
-}
-
-@media (max-width: 480px) {
-    .inquiry-popup { padding: 2.5rem 1.75rem; }
-    .popup-title { font-size: 2rem; }
-}
     </style>
 </head>
 <body>
@@ -1177,15 +1093,12 @@
     <nav>
         <div class="container nav-inner">
             <div class="nav-logo">
-                <!-- REPLACE WITH YOUR ATTACHED LOGO -->
                 <img src="logo.png" alt="HANI Overseas Logo">
             </div>
             
-            <!-- Desktop Links -->
             <div class="nav-links">
                 <a href="#heritage">Heritage</a>
                 
-                <!-- Collections Dropdown -->
                 <div class="dropdown">
                     <div class="dropdown-trigger">Collections</div>
                     <div class="mega-menu">
@@ -1212,7 +1125,6 @@
                 <a href="#inquiry">Inquiries</a>
             </div>
 
-            <!-- Mobile Menu Toggle -->
             <div class="menu-toggle" onclick="toggleMobileMenu()">
                 <span></span>
                 <span></span>
@@ -1221,7 +1133,7 @@
         </div>
     </nav>
 
-    <!-- Mobile Navigation Overlay -->
+    <!-- Mobile Navigation -->
     <div class="mobile-nav" id="mobileNav">
         <a href="#heritage" onclick="toggleMobileMenu()">Heritage</a>
         <div class="mobile-collections">
@@ -1235,9 +1147,8 @@
         <a href="#inquiry" onclick="toggleMobileMenu()">Inquiries</a>
     </div>
 
-    <!-- Main Content Area -->
     <main>
-        <!-- Hero Header -->
+        <!-- Hero -->
         <header class="hero">
             <div class="particles-container">
                 <div class="particle"></div>
@@ -1267,7 +1178,7 @@
             </div>
         </header>
 
-        <!-- Heritage Statement -->
+        <!-- Heritage -->
         <section class="heritage" id="heritage">
             <div class="container heritage-grid">
                 <div class="heritage-text reveal">
@@ -1283,7 +1194,7 @@
             </div>
         </section>
 
-        <!-- Static Featured Catalog (Landing Page View) -->
+        <!-- Static Catalog -->
         <section class="catalog-featured" id="catalog-featured">
             <div class="container">
                 <div class="section-header reveal">
@@ -1330,7 +1241,7 @@
             </div>
         </section>
 
-        <!-- Dynamic Collection Viewer -->
+        <!-- Dynamic Viewer -->
         <section class="collection-viewer" id="collection-viewer">
             <div class="container">
                 <div class="viewer-header">
@@ -1341,13 +1252,11 @@
                     </div>
                     <div class="back-btn" onclick="closeCollection()">← Back to Overview</div>
                 </div>
-                <div class="product-display-grid" id="product-grid">
-                    <!-- Dynamic Product Items will be injected here by JavaScript -->
-                </div>
+                <div class="product-display-grid" id="product-grid"></div>
             </div>
         </section>
 
-        <!-- B2B Infrastructure Panel -->
+        <!-- Infrastructure -->
         <section class="infrastructure" id="infrastructure">
             <div class="container infra-grid">
                 <div class="infra-left reveal">
@@ -1388,7 +1297,7 @@
             </div>
         </section>
 
-        <!-- Inquiries Portal -->
+        <!-- Inquiries -->
         <section class="inquiry" id="inquiry">
             <div class="container">
                 <div class="inquiry-info reveal">
@@ -1412,7 +1321,7 @@
                     </div>
                 </div>
 
-               <form class="inquiry-form reveal" id="inquiryForm" onsubmit="handleInquiry(event)">
+                <form class="inquiry-form reveal" id="inquiryForm" onsubmit="handleInquiry(event)">
                     <div class="form-group">
                         <label for="name">Full Name</label>
                         <input type="text" id="name" name="name" placeholder="John Doe" required>
@@ -1445,7 +1354,6 @@
         </section>
     </main>
 
-    <!-- Footer -->
     <footer>
         <div class="container footer-inner">
             <p>&copy; 2026 HANI Overseas. All rights reserved.</p>
@@ -1453,419 +1361,130 @@
         </div>
     </footer>
 
-    <!-- JavaScript -->
+    <!-- Inquiry Success Popup -->
+    <div class="inquiry-popup-overlay" id="inquiryPopup">
+        <div class="inquiry-popup">
+            <div class="popup-icon">
+                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="12" cy="12" r="10" stroke="#C5A880" stroke-width="1.5"/>
+                    <path d="M8 12.5L11 15.5L16 9.5" stroke="#C5A880" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </div>
+            <span class="popup-label">Inquiry Received</span>
+            <h3 class="popup-title">Thank You.</h3>
+            <p class="popup-message">
+                Your inquiry has been successfully submitted. Our export team will review your requirements and contact you within <strong>24 business hours</strong>.
+            </p>
+            <button class="popup-btn" onclick="closeInquiryPopup()">Continue Browsing</button>
+        </div>
+    </div>
+
     <script>
         // =========================================
-        // COLLECTIONS DATA STRUCTURE
+        // COLLECTIONS DATA
         // =========================================
         const collectionsData = {
-            // -------------------------------------
-            // 1. PREMIUM TABLEWARE
-            // -------------------------------------
             tableware: {
                 title: "Premium Tableware",
                 label: "Collection",
                 description: "Hotel and restaurant-grade metal tableware including charger plates, serving bowls, and elegant dining accessories. Handcrafted from premium copper and brass for durability, elegance, and high-volume commercial use. Available for orders of any size.",
                 products: [
-                    { 
-                        img: "Tableware/T-1.png", 
-                        name: "Brass Dessert & Serving Bowl Set", 
-                        desc: "A traditional set of polished brass bowls with a fluted design, accompanied by matching brass spoons. Ideal for serving desserts, ice cream, or condiments with an elegant, vintage touch" 
-                    },
-                    { 
-                        img: "Tableware/T-2.png", 
-                        name: "Brass Serving Bowl", 
-                        desc: "Solid brass serving bowl with etched detailing. Perfect for salads, fruits, and decorative table displays." 
-                    },
-                    { 
-                        img: "Tableware/T-3.png", 
-                        name: "Round Wooden Serving Bowl", 
-                        desc: "Set of nested copper serving bowls with a polished finish. Available in multiple sizes for catering operations." 
-                    },
-                    { 
-                        img: "Tableware/T-4.png", 
-                        name: "Woven Rattan Placemat Set", 
-                        desc: "A set of circular placemats made from woven natural rattan or seagrass. These add a rustic, bohemian texture to dining tables and protect surfaces while enhancing the table setting." 
-                    },
-                    { 
-                        img: "Tableware/T-5.png", 
-                        name: "Woven Wicker Round Tray", 
-                        desc: "A decorative tray made from tightly woven natural fibers with a flat base. Use for serving breakfast in bed, organizing vanity items, or as a base for centerpieces" 
-                    },
-                    { 
-                        img: "Tableware/T-6.png", 
-                        name: "Scalloped Edge Wooden Charger Plate", 
-                        desc: "A decorative charger plate made of wood with a distressed finish and scalloped edges. It serves as a base plate for formal dining settings or as a standalone decorative piece." 
-                    },
-                    { 
-                        img: "Tableware/T-7.png", 
-                        name: "Round Wooden Charger Plate", 
-                        desc: "A wide, flat charger plate made from dark-stained wood. Its simple, elegant design is perfect for layering under dinner plates for upscale restaurant or hotel service." 
-                    },
-                    { 
-                        img: "Tableware/T-8.png", 
-                        name: "Hammered Copper Charger Plate", 
-                        desc: "A round charger plate made of copper featuring a distinct dimpled (hammered) texture. It adds a warm, metallic gleam to place settings." 
-                    },
-                    { 
-                        img: "Tableware/T-9.png", 
-                        name: "Assorted Metallic Charger Plates", 
-                        desc: "A collection of decorative charger plates in varying gold and brass tones. The set features different textures, including beaded, sunburst, and hammered patterns, designed for mix-and-match elegant table styling" 
-                    },
-                    { 
-                        img: "Tableware/T-10.png", 
-                        name: "Woven Rattan Round Placemats", 
-                        desc: "A set of four circular placemats crafted from woven rattan with a dark brown finish. They feature a decorative open-weave center and a solid rim." 
-                    },
-                    { 
-                        img: "Tableware/T-11.png", 
-                        name: "Large Woven Rattan Charger Plate", 
-                        desc: "A large, flat charger plate woven from dark rattan or wicker. It provides a textured, natural base for dinnerware and fits rustic or tropical table themes." 
-                    }
+                    { img: "Tableware/T-1.png", name: "Brass Dessert & Serving Bowl Set", desc: "A traditional set of polished brass bowls with a fluted design, accompanied by matching brass spoons. Ideal for serving desserts, ice cream, or condiments with an elegant, vintage touch" },
+                    { img: "Tableware/T-2.png", name: "Brass Serving Bowl", desc: "Solid brass serving bowl with etched detailing. Perfect for salads, fruits, and decorative table displays." },
+                    { img: "Tableware/T-3.png", name: "Round Wooden Serving Bowl", desc: "Set of nested copper serving bowls with a polished finish. Available in multiple sizes for catering operations." },
+                    { img: "Tableware/T-4.png", name: "Woven Rattan Placemat Set", desc: "A set of circular placemats made from woven natural rattan or seagrass. These add a rustic, bohemian texture to dining tables and protect surfaces while enhancing the table setting." },
+                    { img: "Tableware/T-5.png", name: "Woven Wicker Round Tray", desc: "A decorative tray made from tightly woven natural fibers with a flat base. Use for serving breakfast in bed, organizing vanity items, or as a base for centerpieces" },
+                    { img: "Tableware/T-6.png", name: "Scalloped Edge Wooden Charger Plate", desc: "A decorative charger plate made of wood with a distressed finish and scalloped edges. It serves as a base plate for formal dining settings or as a standalone decorative piece." },
+                    { img: "Tableware/T-7.png", name: "Round Wooden Charger Plate", desc: "A wide, flat charger plate made from dark-stained wood. Its simple, elegant design is perfect for layering under dinner plates for upscale restaurant or hotel service." },
+                    { img: "Tableware/T-8.png", name: "Hammered Copper Charger Plate", desc: "A round charger plate made of copper featuring a distinct dimpled (hammered) texture. It adds a warm, metallic gleam to place settings." },
+                    { img: "Tableware/T-9.png", name: "Assorted Metallic Charger Plates", desc: "A collection of decorative charger plates in varying gold and brass tones. The set features different textures, including beaded, sunburst, and hammered patterns, designed for mix-and-match elegant table styling" },
+                    { img: "Tableware/T-10.png", name: "Woven Rattan Round Placemats", desc: "A set of four circular placemats crafted from woven rattan with a dark brown finish. They feature a decorative open-weave center and a solid rim." },
+                    { img: "Tableware/T-11.png", name: "Large Woven Rattan Charger Plate", desc: "A large, flat charger plate woven from dark rattan or wicker. It provides a textured, natural base for dinnerware and fits rustic or tropical table themes." }
                 ]
             },
 
-            // -------------------------------------
-            // 2. DRINKWARE
-            // -------------------------------------
             lighting: {
                 title: "Drinkware",
                 label: "Collection",
                 description: "Premium copper drinkware including bottles, tumblers, and mugs. Handcrafted to preserve the traditional wellness benefits of copper while delivering elegant design for modern hospitality and retail.",
                 products: [
-                    { 
-                        img: "bottle/bottle-1.png", 
-                        name: "Engraved Bronze-Finish Copper Water Bottle", 
-                        desc: "A sleek copper water bottle featuring an intricate, all-over etched vine and floral pattern with a dark bronze or antique finish. Comes with a matching leak-proof cap" 
-                    },
-                    { 
-                        img: "bottle/bottle-2.png", 
-                        name: "Blue & White Floral Printed Copper Bottle", 
-                        desc: "A pure copper water bottle decorated with a traditional blue and white floral (Chinoiserie-style) print. Combining the health benefits of copper with an elegant, ceramic-look aesthetic." 
-                    },
-                    { 
-                        img: "bottle/bottle-3.png", 
-                        name: "Multi-Color Floral Art Printed Copper Bottle", 
-                        desc: "A copper water bottle featuring vibrant, multi-colored floral and botanical artwork on a dark background. A stylish and functional hydration accessory." 
-                    },
-                    { 
-                        img: "bottle/bottle-4.png", 
-                        name: "Classic Plain Copper Water Bottle", 
-                        desc: "A minimalist, solid copper water bottle with a smooth, polished finish and a threaded leak-proof cap. Ideal for everyday Ayurvedic wellness use." 
-                    },
-                    { 
-                        img: "bottle/bottle-5.png", 
-                        name: "Assorted Engraved & Hammered Copper Bottles", 
-                        desc: "A duo of designed copper bottles. One features a dark antique finish with dense, intricate engraving, while the other has a bright, polished copper finish with a textured hammered pattern." 
-                    },
-                    { 
-                        img: "bottle/bottle-6.png", 
-                        name: "Hammered Copper Water Bottle", 
-                        desc: "A pure copper water bottle featuring a traditional hand-hammered texture and a polished finish. The dimpled surface provides a unique look and better grip" 
-                    },{ 
-                        img: "Dispenser/D-1.png", 
-                        name: "Pearl Mosaic Copper Dispenser with Stand & Tumbler", 
-                        desc: "Elegant pure copper dispenser featuring a pearl and mint geometric mosaic pattern, complete with a matching tumbler and gold stand." 
-                    },
-                    { 
-                        img: "Dispenser/D-2.png", 
-                        name: "Hammered Copper Barrel Dispenser with Brass Stand", 
-                        desc: "Classic barrel-shaped pure copper dispenser with a hand-hammered texture, polished finish, and a sturdy brass stand." 
-                    },
-                    { 
-                        img: "Dispenser/D-3.png", 
-                        name: "Antique Floral Embossed Copper Dispenser", 
-                        desc: "Vintage-style pure copper water dispenser featuring a rich oxidized finish and intricate all-over floral embossed detailing." 
-                    },
-                    { 
-                        img: "Dispenser/D-4.png", 
-                        name: "Ribbed Copper Dispenser with Pedestal Base", 
-                        desc: "Modern pure copper dispenser with a sleek vertical ribbed design and a matching attached copper pedestal base." 
-                    },
-                    { 
-                        img: "Dispenser/D-5.png", 
-                        name: "Fluted Copper Pot with Pedestal Base", 
-                        desc: " wide-bodied, hand-crafted pure copper pot featuring a classic vertical fluted (ribbed) design and a smooth, polished finish, elevated on a matching copper pedestal base." 
-                    },
-                    { 
-                        img: "Dispenser/D-6.png", 
-                        name: "Hammered Copper Dispenser with 4-Leg Brass Stand", 
-                        desc: "A wide-bodied, hand-hammered pure copper pot with a rounded barrel shape, elevated by a contrasting, sturdy four-legged brass stand." 
-                    },{ 
-                        img: "Dispenser/D-7.png", 
-                        name: "ngraved Bronze-Finish Copper Dispenser", 
-                        desc: "A sleek copper water Dispenser featuring an intricate, all-over etched vine and floral pattern with a dark bronze or antique finish. Comes with a matching leak-proof cap" 
-                    },{ 
-    img: "mugsandglass/M-1.png", 
-    name: "Hammered Copper Mug", 
-    desc: "A classic, straight-sided pure copper mug featuring a hand-hammered textured finish and a comfortable, curved handle." 
-},
-{ 
-    img: "mugsandglass/M-2.png", 
-    name: "Hammered Copper Mug with Brass Handle", 
-    desc: "A hand-hammered, rounded pure copper mug featuring a contrasting, elegant brass handle and a slightly flared base." 
-},
-{ 
-    img: "mugsandglass/M-3.png", 
-    name: "Hammered Copper Martini Glasses (Set of 2)", 
-    desc: "A pair of elegant, long-stemmed copper glasses featuring a classic conical bowl with a hand-hammered texture and a smooth, polished base." 
-},
-{ 
-    img: "mugsandglass/M-4.png", 
-    name: "Engraved Copper Tumbler", 
-    desc: "A duo of designed copper bottles. One features a dark antique finish with dense, intricate engraving, while the other has a bright, polished copper finish with a textured hammered pattern." 
-
-},
-{ 
-    img: "mugsandglass/M-5.png", 
-    name: "Hammered Copper Pitcher with Brass Handle", 
-    desc: "A classic, bulbous copper pitcher featuring a hand-hammered body, a sturdy brass handle, a brass base, and a distinctive ice lip spout." 
-},
-{ 
-    img: "mugsandglass/M-6.png", 
-    name: "Copper Jug", 
-    desc: "A solid pure copper jug featuring a classic, tall body with distinct horizontal bands, a sturdy curved handle, a pouring spout, and a matching lid. It has a polished, reflective finish, making it ideal for serving water or other beverages." 
-}
+                    { img: "bottle/bottle-1.png", name: "Engraved Bronze-Finish Copper Water Bottle", desc: "A sleek copper water bottle featuring an intricate, all-over etched vine and floral pattern with a dark bronze or antique finish. Comes with a matching leak-proof cap" },
+                    { img: "bottle/bottle-2.png", name: "Blue & White Floral Printed Copper Bottle", desc: "A pure copper water bottle decorated with a traditional blue and white floral (Chinoiserie-style) print. Combining the health benefits of copper with an elegant, ceramic-look aesthetic." },
+                    { img: "bottle/bottle-3.png", name: "Multi-Color Floral Art Printed Copper Bottle", desc: "A copper water bottle featuring vibrant, multi-colored floral and botanical artwork on a dark background. A stylish and functional hydration accessory." },
+                    { img: "bottle/bottle-4.png", name: "Classic Plain Copper Water Bottle", desc: "A minimalist, solid copper water bottle with a smooth, polished finish and a threaded leak-proof cap. Ideal for everyday Ayurvedic wellness use." },
+                    { img: "bottle/bottle-5.png", name: "Assorted Engraved & Hammered Copper Bottles", desc: "A duo of designed copper bottles. One features a dark antique finish with dense, intricate engraving, while the other has a bright, polished copper finish with a textured hammered pattern." },
+                    { img: "bottle/bottle-6.png", name: "Hammered Copper Water Bottle", desc: "A pure copper water bottle featuring a traditional hand-hammered texture and a polished finish. The dimpled surface provides a unique look and better grip" },
+                    { img: "Dispenser/D-1.png", name: "Pearl Mosaic Copper Dispenser with Stand & Tumbler", desc: "Elegant pure copper dispenser featuring a pearl and mint geometric mosaic pattern, complete with a matching tumbler and gold stand." },
+                    { img: "Dispenser/D-2.png", name: "Hammered Copper Barrel Dispenser with Brass Stand", desc: "Classic barrel-shaped pure copper dispenser with a hand-hammered texture, polished finish, and a sturdy brass stand." },
+                    { img: "Dispenser/D-3.png", name: "Antique Floral Embossed Copper Dispenser", desc: "Vintage-style pure copper water dispenser featuring a rich oxidized finish and intricate all-over floral embossed detailing." },
+                    { img: "Dispenser/D-4.png", name: "Ribbed Copper Dispenser with Pedestal Base", desc: "Modern pure copper dispenser with a sleek vertical ribbed design and a matching attached copper pedestal base." },
+                    { img: "Dispenser/D-5.png", name: "Fluted Copper Pot with Pedestal Base", desc: "wide-bodied, hand-crafted pure copper pot featuring a classic vertical fluted (ribbed) design and a smooth, polished finish, elevated on a matching copper pedestal base." },
+                    { img: "Dispenser/D-6.png", name: "Hammered Copper Dispenser with 4-Leg Brass Stand", desc: "A wide-bodied, hand-hammered pure copper pot with a rounded barrel shape, elevated by a contrasting, sturdy four-legged brass stand." },
+                    { img: "Dispenser/D-7.png", name: "Engraved Bronze-Finish Copper Dispenser", desc: "A sleek copper water Dispenser featuring an intricate, all-over etched vine and floral pattern with a dark bronze or antique finish. Comes with a matching leak-proof cap" },
+                    { img: "mugsandglass/M-1.png", name: "Hammered Copper Mug", desc: "A classic, straight-sided pure copper mug featuring a hand-hammered textured finish and a comfortable, curved handle." },
+                    { img: "mugsandglass/M-2.png", name: "Hammered Copper Mug with Brass Handle", desc: "A hand-hammered, rounded pure copper mug featuring a contrasting, elegant brass handle and a slightly flared base." },
+                    { img: "mugsandglass/M-3.png", name: "Hammered Copper Martini Glasses (Set of 2)", desc: "A pair of elegant, long-stemmed copper glasses featuring a classic conical bowl with a hand-hammered texture and a smooth, polished base." },
+                    { img: "mugsandglass/M-4.png", name: "Engraved Copper Tumbler", desc: "A duo of designed copper bottles. One features a dark antique finish with dense, intricate engraving, while the other has a bright, polished copper finish with a textured hammered pattern." },
+                    { img: "mugsandglass/M-5.png", name: "Hammered Copper Pitcher with Brass Handle", desc: "A classic, bulbous copper pitcher featuring a hand-hammered body, a sturdy brass handle, a brass base, and a distinctive ice lip spout." },
+                    { img: "mugsandglass/M-6.png", name: "Copper Jug", desc: "A solid pure copper jug featuring a classic, tall body with distinct horizontal bands, a sturdy curved handle, a pouring spout, and a matching lid. It has a polished, reflective finish, making it ideal for serving water or other beverages." }
                 ]
             },
 
-            // -------------------------------------
-            // 3. KITCHENWARE
-            // -------------------------------------
             furniture: {
                 title: "Kitchenware",
                 label: "Collection",
                 description: "Premium copper kitchenware including cookware, utensils, and serving tools. Combining traditional Indian craftsmanship with modern functionality for professional and home kitchens alike.",
                 products: [
-                    { 
-                        img: "Kitchenware/K-1.png", 
-                        name: "Hammered Copper Serving Bowls (Set of 4)", 
-                        desc: "A set of four small, polished copper bowls featuring a traditional hand-hammered texture and a fluted pedestal base. Perfect for serving individual portions of desserts, nuts, or dips." 
-                    },
-                    { 
-                        img: "Kitchenware/K-2.png", 
-                        name: "Hammered Copper Bowl with Lid", 
-                        desc: "A wide, shallow copper serving bowl or casserole dish featuring a hammered finish and a matching copper lid with a decorative knob. Ideal for keeping food warm or for elegant tabletop serving." 
-                    },
-                    { 
-                        img: "Kitchenware/K-3.png", 
-                        name: "Copper Measuring Cup Set with Wooden Handles", 
-                        desc: "A set of four copper measuring cups (1 cup, 1/2 cup, 1/3 cup, 1/4 cup) featuring contrasting wooden handles and clear stamped measurement markings. A stylish and functional addition to any kitchen." 
-                    },
-                    { 
-                        img: "Kitchenware/K-4.png", 
-                        name: "Copper Kitchen Storage Canister Set (Set of 3)", 
-                        desc: "A set of three polished copper storage containers with matching lids, labeled Flour,Sugar,and Coffee.These airtight canisters add a premium, traditional touch to kitchen organization." 
-                    }, 
-                    { 
-                        img: "Kitchenware/K-5.png", 
-                        name: "Hammered Copper Serving Set (Thali Set)", 
-                        desc: "A traditional, hand-hammered copper dinnerware set including a large round tray (thali) and several small matching bowls, accompanied by a copper spoon and fork. Perfect for serving traditional meals or as a decorative centerpiece." 
-                    },
-                    { 
-                        img: "Kitchenware/K-6.png", 
-                        name: "Copper Coaster and Plate Set", 
-                        desc: "A set of smooth, polished copper plates or chargers alongside a stack of matching small copper cups or coasters. Ideal for elegant table settings or serving individual portions." 
-                    },
-                    { 
-                        img: "Kitchenware/K-7.png", 
-                        name: "Hammered Copper Serving Bowls with Handles (Set of 6)", 
-                        desc: "A nested set of six shallow copper bowls, each featuring a hand-hammered texture and two integrated, cut-out handles on the sides. Suitable for serving curries, soups, or side dishes." 
-                    },{ 
-    img: "flatwares/F-1.png", 
-    name: "Royal Gold Cutlery Set", 
-    desc: "An elegant gold-toned flatware set featuring intricately designed, vintage-style handles with a polished mirror finish." 
-},
-{ 
-    img: "flatwares/F-2.png", 
-    name: "Modern Gold Cutlery Set", 
-    desc: "A sleek, contemporary gold flatware set with smooth, minimalist handles and a highly reflective, luxurious finish." 
-},
-{ 
-    img: "flatwares/F-3.png", 
-    name: "Gold & Green Two-Tone Cutlery Set", 
-    desc: "A modern flatware set featuring polished gold heads and contrasting matte dark green handles for a sophisticated table setting." 
-},
-{ 
-    img: "flatwares/F-4.png", 
-    name: "Rustic Wooden Cutlery Set with Wrapped Handles", 
-    desc: "A unique, handcrafted wooden flatware set featuring textured, wire-wrapped handles for a natural, bohemian aesthetic." 
-},
-{ 
-    img: "flatwares/F-5.png", 
-    name: "Complete Wooden Flatware Set", 
-    desc: "A comprehensive set of wooden cutlery including forks, knives, and spoons, crafted with a smooth, natural wood grain finish." 
-},
-{ 
-    img: "flatwares/F-6.png", 
-    name: "Gold Flatware with Etched Handle Details", 
-    desc: "A luxurious gold cutlery set featuring subtle, elegant etched patterns near the base of the handles and smooth, polished heads." 
-},
-{ 
-    img: "flatwares/F-7.png", 
-    name: "Classic Gold Flatware Set", 
-    desc: "A traditional gold-toned flatware set with gently contoured handles and a bright, highly polished finish." 
-},
-{ 
-    img: "flatwares/F-8.png", 
-    name: "Ornate Gold Flatware Set", 
-    desc: "A premium gold cutlery set featuring beautifully detailed, vintage-inspired embossed handles and perfectly balanced heads." 
-},
-{ 
-    img: "flatwares/F-9.png", 
-    name: "Sleek Minimalist Gold Flatware Set", 
-    desc: "A modern, minimalist gold flatware set with smooth, slender handles and a flawless, mirror-like finish." 
-},
-{ 
-    img: "flatwares/F-10.png", 
-    name: "Gold Serving Tongs", 
-    desc: "A pair of polished gold serving tongs with a scalloped edge and slotted design, perfect for elegantly serving salads or appetizers." 
-},
-{ 
-    img: "flatwares/F-11.png", 
-    name: "Ornate Silver Flatware Set", 
-    desc: "A classic silver-toned flatware set featuring highly detailed, vintage-style embossed handles for a formal dining experience." 
-},
-{ 
-    img: "flatwares/F-12.png", 
-    name: "Ornate Silver Fork", 
-    desc: "A single silver-toned fork featuring an intricately designed, vintage-style handle with floral and scroll motifs." 
-},{ 
-    img: "cutleryorganizer/CO-1.png", 
-    name: "Wooden Flatware Organizer with Leather Straps", 
-    desc: "A rustic wooden cutlery holder featuring black leather straps secured with silver rivets, designed to elegantly display a fork and spoon." 
-},
-{ 
-    img: "cutleryorganizer/CO-2.png", 
-    name: "Modern Wooden Cutlery Pouch Set", 
-    desc: "A set of two stylish wooden cutlery holders with minimalist line detailing and textured fabric bands, perfect for holding a fork and knife." 
-},
-{ 
-    img: "cutleryorganizer/CO-3.png", 
-    name: "Wooden Cutlery Holder with Black Metal Stand", 
-    desc: "A premium wooden cutlery organizer featuring three square compartments set in a sleek black metal frame with handles, ideal for storing forks, spoons, and knives." 
-},
-{ 
-    img: "cutleryorganizer/CO-4.png", 
-    name: "Hammered Metal Chopstick & Cutlery Rest (Set of 4)", 
-    desc: "A set of four wavy, hammered metal rests in gold and silver tones, designed to elegantly hold chopsticks and cutlery at the dining table." 
-},
-{ 
-    img: "cutleryorganizer/CO-5.png", 
-    name: "Geometric Gold Cutlery Rest Set", 
-    desc: "A modern, geometric gold cutlery rest set featuring interlocking block pieces to securely hold a fork and knife." 
-},
-{ 
-    img: "cutleryorganizer/CO-6.png", 
-    name: "Bamboo Utensil Holder with Engraved Icons", 
-    desc: "A natural bamboo cutlery organizer with three cylindrical compartments featuring engraved spoon, fork, and knife icons on a matching drip tray." 
-},
-{ 
-    img: "cutleryorganizer/CO-7.png", 
-    name: "White Ceramic & Gold Wire Cutlery Holder", 
-    desc: "An elegant white ceramic utensil holder encased in a decorative gold wire frame with a bow design, perfect for storing flatware." 
-},
-{ 
-    img: "cutleryorganizer/CO-8.png", 
-    name: "Hammered Metal Cutlery Rest (Set of 3)", 
-    desc: "A set of three wavy, hammered metal rests in gold, copper, and silver finishes, ideal for keeping cutlery and chopsticks clean and organized." 
-},
-{ 
-    img: "cutleryorganizer/CO-9.png", 
-    name: "Rustic Wooden Cutlery Caddy", 
-    desc: "A vintage-style wooden cutlery organizer with the word 'CUTLERY' engraved on the front, featuring two compartments and rivet detailing." 
-},
-{ 
-    img: "cutleryorganizer/CO-10.png", 
-    name: "Geometric Metal Cutlery Rest (Set of 4)", 
-    desc: "A set of four modern, geometric cutlery rests in silver, rose gold, black, and gold finishes, designed to hold cutlery and chopsticks." 
-},
-{ 
-    img: "cutleryorganizer/CO-11.png", 
-    name: "White Ceramic Cutlery Holder with Gold Stand", 
-    desc: "A set of two elegant white ceramic utensil holders elevated on sleek gold metal stands, perfect for organizing flatware." 
-}
+                    { img: "Kitchenware/K-1.png", name: "Hammered Copper Serving Bowls (Set of 4)", desc: "A set of four small, polished copper bowls featuring a traditional hand-hammered texture and a fluted pedestal base. Perfect for serving individual portions of desserts, nuts, or dips." },
+                    { img: "Kitchenware/K-2.png", name: "Hammered Copper Bowl with Lid", desc: "A wide, shallow copper serving bowl or casserole dish featuring a hammered finish and a matching copper lid with a decorative knob. Ideal for keeping food warm or for elegant tabletop serving." },
+                    { img: "Kitchenware/K-3.png", name: "Copper Measuring Cup Set with Wooden Handles", desc: "A set of four copper measuring cups (1 cup, 1/2 cup, 1/3 cup, 1/4 cup) featuring contrasting wooden handles and clear stamped measurement markings. A stylish and functional addition to any kitchen." },
+                    { img: "Kitchenware/K-4.png", name: "Copper Kitchen Storage Canister Set (Set of 3)", desc: "A set of three polished copper storage containers with matching lids, labeled Flour, Sugar, and Coffee. These airtight canisters add a premium, traditional touch to kitchen organization." },
+                    { img: "Kitchenware/K-5.png", name: "Hammered Copper Serving Set (Thali Set)", desc: "A traditional, hand-hammered copper dinnerware set including a large round tray (thali) and several small matching bowls, accompanied by a copper spoon and fork. Perfect for serving traditional meals or as a decorative centerpiece." },
+                    { img: "Kitchenware/K-6.png", name: "Copper Coaster and Plate Set", desc: "A set of smooth, polished copper plates or chargers alongside a stack of matching small copper cups or coasters. Ideal for elegant table settings or serving individual portions." },
+                    { img: "Kitchenware/K-7.png", name: "Hammered Copper Serving Bowls with Handles (Set of 6)", desc: "A nested set of six shallow copper bowls, each featuring a hand-hammered texture and two integrated, cut-out handles on the sides. Suitable for serving curries, soups, or side dishes." },
+                    { img: "flatwares/F-1.png", name: "Royal Gold Cutlery Set", desc: "An elegant gold-toned flatware set featuring intricately designed, vintage-style handles with a polished mirror finish." },
+                    { img: "flatwares/F-2.png", name: "Modern Gold Cutlery Set", desc: "A sleek, contemporary gold flatware set with smooth, minimalist handles and a highly reflective, luxurious finish." },
+                    { img: "flatwares/F-3.png", name: "Gold & Green Two-Tone Cutlery Set", desc: "A modern flatware set featuring polished gold heads and contrasting matte dark green handles for a sophisticated table setting." },
+                    { img: "flatwares/F-4.png", name: "Rustic Wooden Cutlery Set with Wrapped Handles", desc: "A unique, handcrafted wooden flatware set featuring textured, wire-wrapped handles for a natural, bohemian aesthetic." },
+                    { img: "flatwares/F-5.png", name: "Complete Wooden Flatware Set", desc: "A comprehensive set of wooden cutlery including forks, knives, and spoons, crafted with a smooth, natural wood grain finish." },
+                    { img: "flatwares/F-6.png", name: "Gold Flatware with Etched Handle Details", desc: "A luxurious gold cutlery set featuring subtle, elegant etched patterns near the base of the handles and smooth, polished heads." },
+                    { img: "flatwares/F-7.png", name: "Classic Gold Flatware Set", desc: "A traditional gold-toned flatware set with gently contoured handles and a bright, highly polished finish." },
+                    { img: "flatwares/F-8.png", name: "Ornate Gold Flatware Set", desc: "A premium gold cutlery set featuring beautifully detailed, vintage-inspired embossed handles and perfectly balanced heads." },
+                    { img: "flatwares/F-9.png", name: "Sleek Minimalist Gold Flatware Set", desc: "A modern, minimalist gold flatware set with smooth, slender handles and a flawless, mirror-like finish." },
+                    { img: "flatwares/F-10.png", name: "Gold Serving Tongs", desc: "A pair of polished gold serving tongs with a scalloped edge and slotted design, perfect for elegantly serving salads or appetizers." },
+                    { img: "flatwares/F-11.png", name: "Ornate Silver Flatware Set", desc: "A classic silver-toned flatware set featuring highly detailed, vintage-style embossed handles for a formal dining experience." },
+                    { img: "flatwares/F-12.png", name: "Ornate Silver Fork", desc: "A single silver-toned fork featuring an intricately designed, vintage-style handle with floral and scroll motifs." },
+                    { img: "cutleryorganizer/CO-1.png", name: "Wooden Flatware Organizer with Leather Straps", desc: "A rustic wooden cutlery holder featuring black leather straps secured with silver rivets, designed to elegantly display a fork and spoon." },
+                    { img: "cutleryorganizer/CO-2.png", name: "Modern Wooden Cutlery Pouch Set", desc: "A set of two stylish wooden cutlery holders with minimalist line detailing and textured fabric bands, perfect for holding a fork and knife." },
+                    { img: "cutleryorganizer/CO-3.png", name: "Wooden Cutlery Holder with Black Metal Stand", desc: "A premium wooden cutlery organizer featuring three square compartments set in a sleek black metal frame with handles, ideal for storing forks, spoons, and knives." },
+                    { img: "cutleryorganizer/CO-4.png", name: "Hammered Metal Chopstick & Cutlery Rest (Set of 4)", desc: "A set of four wavy, hammered metal rests in gold and silver tones, designed to elegantly hold chopsticks and cutlery at the dining table." },
+                    { img: "cutleryorganizer/CO-5.png", name: "Geometric Gold Cutlery Rest Set", desc: "A modern, geometric gold cutlery rest set featuring interlocking block pieces to securely hold a fork and knife." },
+                    { img: "cutleryorganizer/CO-6.png", name: "Bamboo Utensil Holder with Engraved Icons", desc: "A natural bamboo cutlery organizer with three cylindrical compartments featuring engraved spoon, fork, and knife icons on a matching drip tray." },
+                    { img: "cutleryorganizer/CO-7.png", name: "White Ceramic & Gold Wire Cutlery Holder", desc: "An elegant white ceramic utensil holder encased in a decorative gold wire frame with a bow design, perfect for storing flatware." },
+                    { img: "cutleryorganizer/CO-8.png", name: "Hammered Metal Cutlery Rest (Set of 3)", desc: "A set of three wavy, hammered metal rests in gold, copper, and silver finishes, ideal for keeping cutlery and chopsticks clean and organized." },
+                    { img: "cutleryorganizer/CO-9.png", name: "Rustic Wooden Cutlery Caddy", desc: "A vintage-style wooden cutlery organizer with the word 'CUTLERY' engraved on the front, featuring two compartments and rivet detailing." },
+                    { img: "cutleryorganizer/CO-10.png", name: "Geometric Metal Cutlery Rest (Set of 4)", desc: "A set of four modern, geometric cutlery rests in silver, rose gold, black, and gold finishes, designed to hold cutlery and chopsticks." },
+                    { img: "cutleryorganizer/CO-11.png", name: "White Ceramic Cutlery Holder with Gold Stand", desc: "A set of two elegant white ceramic utensil holders elevated on sleek gold metal stands, perfect for organizing flatware." }
                 ]
             },
 
-            // -------------------------------------
-            // 4. JEWELLERY
-            // -------------------------------------
             decor: {
                 title: "Jewellery",
                 label: "Collection",
                 description: "Handcrafted copper and brass jewellery including necklaces, earrings, bangles, and pendants. Each piece blends traditional Moradabad artistry with contemporary design for luxury retail and boutique collections.",
                 products: [
-                    { 
-                        img: "Jewellery/J-1.png", 
-                        name: "Antique Finish Copper Rings (Set of 3)", 
-                        desc: "A set of three wide band copper rings featuring an oxidized, antique finish with intricate embossed border detailing." 
-                    },
-                    { 
-                        img: "Jewellery/J-2.png", 
-                        name: "Engraved Copper Cuff Bracelet", 
-                        desc: "A wide, open-ended copper cuff bracelet featuring a polished finish with ornate vine and scrollwork engravings along the center, bordered by a beaded texture." 
-                    },
-                    { 
-                        img: "Jewellery/J-3.png", 
-                        name: "Spiral Copper Dangle Earrings", 
-                        desc: "A pair of lightweight copper drop earrings featuring a flat, textured circular disc with a decorative wire spiral design and secure French hooks." 
-                    },
-                    { 
-                        img: "Jewellery/J-4.png", 
-                        name: "Floral Engraved Copper Cuff (Adjustable)", 
-                        desc: "A slim, open-ended copper cuff bracelet featuring a delicate, continuous floral or geometric engraved pattern. The ends have small holes, suggesting it may be adjustable or intended for a clasp." 
-                    },
-                    { 
-                        img: "Jewellery/J-5.png", 
-                        name: "Hammered Copper Teardrop Earrings", 
-                        desc: "A pair of elegant copper dangle earrings featuring a teardrop (or rounded triangle) shape with a distinct, reflective hand-hammered texture." 
-                    },
-                    { 
-                        img: "Jewellery/J-6.png", 
-                        name: "Braided Copper Cuff Bracelets (Set of 3)", 
-                        desc: "A set of three interchangeable magnetic copper bracelets. Each bracelet features a twisted, braided rope design and secures with a strong magnetic clasp at the ends." 
-                    }
+                    { img: "Jewellery/J-1.png", name: "Antique Finish Copper Rings (Set of 3)", desc: "A set of three wide band copper rings featuring an oxidized, antique finish with intricate embossed border detailing." },
+                    { img: "Jewellery/J-2.png", name: "Engraved Copper Cuff Bracelet", desc: "A wide, open-ended copper cuff bracelet featuring a polished finish with ornate vine and scrollwork engravings along the center, bordered by a beaded texture." },
+                    { img: "Jewellery/J-3.png", name: "Spiral Copper Dangle Earrings", desc: "A pair of lightweight copper drop earrings featuring a flat, textured circular disc with a decorative wire spiral design and secure French hooks." },
+                    { img: "Jewellery/J-4.png", name: "Floral Engraved Copper Cuff (Adjustable)", desc: "A slim, open-ended copper cuff bracelet featuring a delicate, continuous floral or geometric engraved pattern. The ends have small holes, suggesting it may be adjustable or intended for a clasp." },
+                    { img: "Jewellery/J-5.png", name: "Hammered Copper Teardrop Earrings", desc: "A pair of elegant copper dangle earrings featuring a teardrop (or rounded triangle) shape with a distinct, reflective hand-hammered texture." },
+                    { img: "Jewellery/J-6.png", name: "Braided Copper Cuff Bracelets (Set of 3)", desc: "A set of three interchangeable magnetic copper bracelets. Each bracelet features a twisted, braided rope design and secures with a strong magnetic clasp at the ends." }
                 ]
             }
         };
-// =========================================
-// Inquiry Form → WhatsApp Submission
-// =========================================
-function submitToWhatsApp(event) {
-    event.preventDefault(); // Stop default form submission
 
-    // Get form values
-    const name     = document.getElementById('name').value.trim();
-    const company  = document.getElementById('company').value.trim();
-    const country  = document.getElementById('country').value.trim();
-    const quantity = document.getElementById('quantity').value;
-    const message  = document.getElementById('message').value.trim();
-
-    // Optional: basic validation
-    if (!name || !company || !country || !quantity) {
-        alert('Please fill in all required fields.');
-        return;
-    }
-
-    // Build WhatsApp message
-    const whatsappNumber = "919045202717"; // your number, no + or spaces
-    const text = 
-        `*New Inquiry — HANI Overseas*%0A%0A` +
-        `*Name:* ${encodeURIComponent(name)}%0A` +
-        `*Company:* ${encodeURIComponent(company)}%0A` +
-        `*Country:* ${encodeURIComponent(country)}%0A` +
-        `*Quantity:* ${encodeURIComponent(quantity)}%0A` +
-        `*Message:* ${encodeURIComponent(message || 'N/A')}`;
-
-    // Open WhatsApp
-    window.open(`https://wa.me/${whatsappNumber}?text=${text}`, '_blank');
-
-    // Optional: reset form
-    document.getElementById('inquiryForm').reset();
-}
         // =========================================
-        // 2. Function to Open a Collection
+        // Collection Viewer
         // =========================================
         function openCollection(categoryKey) {
             const data = collectionsData[categoryKey];
@@ -1894,9 +1513,6 @@ function submitToWhatsApp(event) {
             document.getElementById('collection-viewer').scrollIntoView({ behavior: 'smooth' });
         }
 
-        // =========================================
-        // 3. Function to Close a Collection
-        // =========================================
         function closeCollection() {
             document.getElementById('collection-viewer').classList.remove('active');
             document.getElementById('catalog-featured').style.display = 'block';
@@ -1904,7 +1520,7 @@ function submitToWhatsApp(event) {
         }
 
         // =========================================
-        // 4. Mobile Menu Toggle
+        // Mobile Menu
         // =========================================
         function toggleMobileMenu() {
             const mobileNav = document.getElementById('mobileNav');
@@ -1923,7 +1539,7 @@ function submitToWhatsApp(event) {
         }
 
         // =========================================
-        // 5. Custom Cursor Glow
+        // Cursor Glow
         // =========================================
         const cursorGlow = document.getElementById('cursorGlow');
         let mouseX = 0, mouseY = 0;
@@ -1949,7 +1565,7 @@ function submitToWhatsApp(event) {
         animateCursor();
 
         // =========================================
-        // 6. Scroll Reveal Animations
+        // Scroll Reveal
         // =========================================
         const revealElements = document.querySelectorAll('.reveal');
         
@@ -1967,94 +1583,79 @@ function submitToWhatsApp(event) {
 
         revealElements.forEach(el => revealObserver.observe(el));
 
+        // =========================================
+        // INQUIRY FORM → Silent Email + Popup
+        // =========================================
 
-// =========================================
-// Inquiry Form → Background WhatsApp + Popup
-// =========================================
+        // 👇👇👇 REPLACE THIS WITH YOUR FORMSPREE ENDPOINT 👇👇👇
+        const FORMSPREE_ENDPOINT = "https://formspree.io/f/xbgdkagz";
+        // 👆👆👆 Get yours free at https://formspree.io 👆👆👆
 
-// 👇 PUT YOUR WHATSAPP NUMBER HERE (no +, no spaces)
-const WHATSAPP_NUMBER = "919045202717";
+        function handleInquiry(event) {
+            event.preventDefault();
 
-function handleInquiry(event) {
-    event.preventDefault(); // stop default form submission
+            const name     = document.getElementById('name').value.trim();
+            const company  = document.getElementById('company').value.trim();
+            const country  = document.getElementById('country').value.trim();
+            const quantity = document.getElementById('quantity').value;
+            const message  = document.getElementById('message').value.trim();
 
-    // Grab form values
-    const name     = document.getElementById('name').value.trim();
-    const company  = document.getElementById('company').value.trim();
-    const country  = document.getElementById('country').value.trim();
-    const quantity = document.getElementById('quantity').value;
-    const message  = document.getElementById('message').value.trim();
+            if (!name || !company || !country || !quantity) {
+                alert('Please fill in all required fields.');
+                return;
+            }
 
-    // Basic validation
-    if (!name || !company || !country || !quantity) {
-        alert('Please fill in all required fields.');
-        return;
-    }
+            const submitBtn = document.querySelector('.submit-btn');
+            const originalText = submitBtn.innerText;
+            submitBtn.innerText = 'Sending...';
+            submitBtn.disabled = true;
 
-    // Build the WhatsApp message
-    const waText = encodeURIComponent(
-        `*New Inquiry — HANI Overseas*\n\n` +
-        `*Name:* ${name}\n` +
-        `*Company:* ${company}\n` +
-        `*Country:* ${country}\n` +
-        `*Quantity:* ${quantity}\n` +
-        `*Message:* ${message || 'N/A'}`
-    );
+            fetch(FORMSPREE_ENDPOINT, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'Accept': 'application/json'
+                },
+                body: JSON.stringify({
+                    name: name,
+                    company: company,
+                    country: country,
+                    quantity: quantity,
+                    message: message,
+                    _subject: `New Inquiry from ${name} — ${company}`
+                })
+            })
+            .then(response => {
+                if (response.ok) {
+                    document.getElementById('inquiryPopup').classList.add('active');
+                    document.body.style.overflow = 'hidden';
+                    document.getElementById('inquiryForm').reset();
+                } else {
+                    alert('Submission failed. Please email us at infohanioverseas@gmail.com');
+                }
+            })
+            .catch(error => {
+                console.error('Formspree error:', error);
+                alert('Network error. Please email us at infohanioverseas@gmail.com');
+            })
+            .finally(() => {
+                submitBtn.innerText = originalText;
+                submitBtn.disabled = false;
+            });
+        }
 
-    // 🔒 Send to WhatsApp in a HIDDEN background iframe
-    // User stays on your website — no tab switch, no redirect.
-    const iframe = document.createElement('iframe');
-    iframe.style.display = 'none';
-    iframe.style.position = 'absolute';
-    iframe.style.width = '0';
-    iframe.style.height = '0';
-    iframe.style.border = '0';
-    iframe.src = `https://wa.me/${WHATSAPP_NUMBER}?text=${waText}`;
-    document.body.appendChild(iframe);
+        function closeInquiryPopup() {
+            document.getElementById('inquiryPopup').classList.remove('active');
+            document.body.style.overflow = '';
+        }
 
-    // Clean up the iframe after 5 seconds
-    setTimeout(() => iframe.remove(), 5000);
+        document.getElementById('inquiryPopup').addEventListener('click', function(e) {
+            if (e.target === this) closeInquiryPopup();
+        });
 
-    // Show the success popup
-    document.getElementById('inquiryPopup').classList.add('active');
-    document.body.style.overflow = 'hidden'; // lock background scroll
-
-    // Reset the form for next time
-    document.getElementById('inquiryForm').reset();
-}
-
-// Close the popup
-function closeInquiryPopup() {
-    document.getElementById('inquiryPopup').classList.remove('active');
-    document.body.style.overflow = ''; // restore scroll
-}
-
-// Close popup when clicking the dark overlay
-document.getElementById('inquiryPopup').addEventListener('click', function(e) {
-    if (e.target === this) closeInquiryPopup();
-});
-
-// Close popup on Escape key
-document.addEventListener('keydown', function(e) {
-    if (e.key === 'Escape') closeInquiryPopup();
-});
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') closeInquiryPopup();
+        });
     </script>
-<!-- Inquiry Success Popup -->
-<div class="inquiry-popup-overlay" id="inquiryPopup">
-    <div class="inquiry-popup">
-        <div class="popup-icon">
-            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <circle cx="12" cy="12" r="10" stroke="#C5A880" stroke-width="1.5"/>
-                <path d="M8 12.5L11 15.5L16 9.5" stroke="#C5A880" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>
-        </div>
-        <span class="popup-label">Inquiry Received</span>
-        <h3 class="popup-title">Thank You.</h3>
-        <p class="popup-message">
-            Your inquiry has been successfully submitted. Our export team will review your requirements and contact you within <strong>24 business hours</strong>.
-        </p>
-        <button class="popup-btn" onclick="closeInquiryPopup()">Continue Browsing</button>
-    </div>
-</div>
 </body>
 </html>
