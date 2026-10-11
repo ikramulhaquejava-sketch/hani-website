@@ -1305,7 +1305,7 @@
                     </div>
                 </div>
 
-                <form class="inquiry-form reveal" action="#" method="POST">
+                <form class="inquiry-form reveal" id="inquiryForm" onsubmit="submitToWhatsApp(event)">
                     <div class="form-group">
                         <label for="name">Full Name</label>
                         <input type="text" id="name" name="name" placeholder="John Doe" required>
@@ -1722,7 +1722,41 @@
                 ]
             }
         };
+// =========================================
+// Inquiry Form → WhatsApp Submission
+// =========================================
+function submitToWhatsApp(event) {
+    event.preventDefault(); // Stop default form submission
 
+    // Get form values
+    const name     = document.getElementById('name').value.trim();
+    const company  = document.getElementById('company').value.trim();
+    const country  = document.getElementById('country').value.trim();
+    const quantity = document.getElementById('quantity').value;
+    const message  = document.getElementById('message').value.trim();
+
+    // Optional: basic validation
+    if (!name || !company || !country || !quantity) {
+        alert('Please fill in all required fields.');
+        return;
+    }
+
+    // Build WhatsApp message
+    const whatsappNumber = "919045202717"; // your number, no + or spaces
+    const text = 
+        `*New Inquiry — HANI Overseas*%0A%0A` +
+        `*Name:* ${encodeURIComponent(name)}%0A` +
+        `*Company:* ${encodeURIComponent(company)}%0A` +
+        `*Country:* ${encodeURIComponent(country)}%0A` +
+        `*Quantity:* ${encodeURIComponent(quantity)}%0A` +
+        `*Message:* ${encodeURIComponent(message || 'N/A')}`;
+
+    // Open WhatsApp
+    window.open(`https://wa.me/${whatsappNumber}?text=${text}`, '_blank');
+
+    // Optional: reset form
+    document.getElementById('inquiryForm').reset();
+}
         // =========================================
         // 2. Function to Open a Collection
         // =========================================
