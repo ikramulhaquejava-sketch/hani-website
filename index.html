@@ -1048,6 +1048,113 @@
             .product-item { padding: 1rem; }
             .product-item img { height: 200px; }
         }
+        /* =========================================
+   Inquiry Success Popup
+   ========================================= */
+.inquiry-popup-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(17, 17, 17, 0.65);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 100000;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.4s ease, visibility 0.4s ease;
+    padding: 1.5rem;
+}
+
+.inquiry-popup-overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.inquiry-popup {
+    background: var(--bg-pure);
+    max-width: 480px;
+    width: 100%;
+    padding: 3.5rem 3rem;
+    text-align: center;
+    box-shadow: 0 30px 80px rgba(0, 0, 0, 0.25);
+    border-top: 3px solid var(--gold);
+    transform: translateY(30px) scale(0.96);
+    transition: transform 0.5s var(--transition-smooth);
+    position: relative;
+}
+
+.inquiry-popup-overlay.active .inquiry-popup {
+    transform: translateY(0) scale(1);
+}
+
+.popup-icon {
+    width: 64px;
+    height: 64px;
+    margin: 0 auto 1.5rem;
+}
+
+.popup-icon svg {
+    width: 100%;
+    height: 100%;
+}
+
+.popup-label {
+    font-family: var(--font-sans);
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    color: var(--gold);
+    font-weight: 500;
+    display: block;
+    margin-bottom: 0.75rem;
+}
+
+.popup-title {
+    font-family: var(--font-serif);
+    font-size: 2.5rem;
+    color: var(--black-matte);
+    margin-bottom: 1.25rem;
+    line-height: 1.1;
+}
+
+.popup-message {
+    font-size: 0.95rem;
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 2.5rem;
+}
+
+.popup-message strong {
+    color: var(--charcoal);
+    font-weight: 500;
+}
+
+.popup-btn {
+    background-color: var(--black-matte);
+    color: var(--bg-pure);
+    border: none;
+    padding: 1rem 2.5rem;
+    font-family: var(--font-sans);
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.popup-btn:hover {
+    background-color: var(--gold);
+    color: var(--black-matte);
+    transform: translateY(-2px);
+}
+
+@media (max-width: 480px) {
+    .inquiry-popup { padding: 2.5rem 1.75rem; }
+    .popup-title { font-size: 2rem; }
+}
     </style>
 </head>
 <body>
@@ -1305,7 +1412,7 @@
                     </div>
                 </div>
 
-                <form class="inquiry-form reveal" id="inquiryForm" onsubmit="submitToWhatsApp(event)">
+               <form class="inquiry-form reveal" id="inquiryForm" onsubmit="handleInquiry(event)">
                     <div class="form-group">
                         <label for="name">Full Name</label>
                         <input type="text" id="name" name="name" placeholder="John Doe" required>
@@ -1859,8 +1966,93 @@ function submitToWhatsApp(event) {
         });
 
         revealElements.forEach(el => revealObserver.observe(el));
+// =========================================
+// Inquiry Form → Background WhatsApp + Popup
+// =========================================
 
+// 👇 PUT YOUR WHATSAPP NUMBER HERE (no +, no spaces)
+const WHATSAPP_NUMBER = "919045202717";
+
+function handleInquiry(event) {
+    event.preventDefault(); // stop default form submission
+
+    // Grab form values
+    const name     = document.getElementById('name').value.trim();
+    const company  = document.getElementById('company').value.trim();
+    const country  = document.getElementById('country').value.trim();
+    const quantity = document.getElementById('quantity').value;
+    const message  = document.getElementById('message').value.trim();
+
+    // Basic validation
+    if (!name || !company || !country || !quantity) {
+        alert('Please fill in all required fields.');
+        return;
+    }
+
+    // Build the WhatsApp message
+    const waText = encodeURIComponent(
+        `*New Inquiry — HANI Overseas*\n\n` +
+        `*Name:* ${name}\n` +
+        `*Company:* ${company}\n` +
+        `*Country:* ${country}\n` +
+        `*Quantity:* ${quantity}\n` +
+        `*Message:* ${message || 'N/A'}`
+    );
+
+    // 🔒 Send to WhatsApp in a HIDDEN background iframe
+    // User stays on your website — no tab switch, no redirect.
+    const iframe = document.createElement('iframe');
+    iframe.style.display = 'none';
+    iframe.style.position = 'absolute';
+    iframe.style.width = '0';
+    iframe.style.height = '0';
+    iframe.style.border = '0';
+    iframe.src = `https://wa.me/${WHATSAPP_NUMBER}?text=${waText}`;
+    document.body.appendChild(iframe);
+
+    // Clean up the iframe after 5 seconds
+    setTimeout(() => iframe.remove(), 5000);
+
+    // Show the success popup
+    document.getElementById('inquiryPopup').classList.add('active');
+    document.body.style.overflow = 'hidden'; // lock background scroll
+
+    // Reset the form for next time
+    document.getElementById('inquiryForm').reset();
+}
+
+// Close the popup
+function closeInquiryPopup() {
+    document.getElementById('inquiryPopup').classList.remove('active');
+    document.body.style.overflow = ''; // restore scroll
+}
+
+// Close popup when clicking the dark overlay
+document.getElementById('inquiryPopup').addEventListener('click', function(e) {
+    if (e.target === this) closeInquiryPopup();
+});
+
+// Close popup on Escape key
+document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape') closeInquiryPopup();
+});
     </script>
-
+<!-- Inquiry Success Popup -->
+<div class="inquiry-popup-overlay" id="inquiryPopup">
+    <div class="inquiry-popup">
+        <div class="popup-icon">
+            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="12" cy="12" r="10" stroke="#C5A880" stroke-width="1.5"/>
+                <path d="M8 12.5L11 15.5L16 9.5" stroke="#C5A880" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+        </div>
+        <span class="popup-label">Inquiry Received</span>
+        <h3 class="popup-title">Thank You.</h3>
+        <p class="popup-message">
+            Your inquiry has been successfully submitted. Our export team will review your requirements and contact you within <strong>24 business hours</strong>.
+        </p>
+        <button class="popup-btn" onclick="closeInquiryPopup()">Continue Browsing</button>
+    </div>
+</div>
 </body>
 </html>
